@@ -51,7 +51,7 @@ def pdf2json(pdf_path:Path)-> List[Dict[str, str]]:
 
 @app.route('/')
 def index() -> str:
-    return render_template('table_generator.html', title="Car Selection", cars=cars)
+    return render_template('table_generator.html', title="Car Selection")
 
 
 @app.route('/api/data')
@@ -86,9 +86,15 @@ def data() -> dict:
         if col_name in ('transmission', 'model', 'color'):
             filtered_cars.sort(
                 key=lambda car: str(car[col_name]), reverse=descending)
-        if col_name == 'mileage' or col_name == 'price':
+        elif col_name == 'mileage':
             filtered_cars.sort(
-                key=lambda car: float(car[col_name].replace(',','')), reverse=descending)
+                key=lambda car: float('inf') if str(car[col_name]).replace(
+                    ',', '') == '-' else int(str(car[col_name]).replace(',', '')),
+                reverse=descending)
+        elif col_name == 'price':
+            filtered_cars.sort(
+                key=lambda car: float(car[col_name].replace(',', '')),
+                reverse=descending)
         else:
             filtered_cars.sort(key=lambda car: car[col_name], reverse=descending)
 
