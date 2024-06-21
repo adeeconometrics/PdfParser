@@ -1,7 +1,9 @@
 from typing import List, Optional
 from pathlib import Path
 from argparse import ArgumentParser, ArgumentError
-from dataclasses import dataclass, astuple
+from dataclasses import dataclass
+
+import json
 
 import logging
 
@@ -71,11 +73,11 @@ def read_pdf(pdf_path: Path) -> Optional[List]:
         return None
 
 
-def parse_pdf2db(tables: Optional[List]) -> Path:
+def parse_pdf2db(tables: Optional[List]) -> Optional[SQLAlchemy]:
     """parse the pdf table to SQLAlchemy database
     """
     if tables is None:
-        return
+        return None
     try:
         with db.session.begin():
             for table in tables:
@@ -85,19 +87,35 @@ def parse_pdf2db(tables: Optional[List]) -> Path:
                     fields = CarSalesFields(*row[1:])
                     db.session.add(fields)
             db.session.commit()
+        return db
     except SQLAlchemyError as e:
         logger.error(f"An error occurred while updating the database: {e}", exec_info=True)
         db.session.rollback()
+        return None
 
+
+def db2json(db: SQLAlchemy, output_path:Path) -> dict:
+    """Convert the database to JSON
+    """
+    try:
+        data = CarSalesFields.query.all()
+
+        car_data = [car.to_dict() for car in data]
+        with open(output_path, 'w') as f:
+            json.dump(car_data, f, indent=4)
+        return car_data
+    except SQLAlchemyError as e:
+        logger.error(f"An error occurred while converting the database to JSON: {e}", exec_info=True)
+        return {}
 
 @app.route('/')
-def index():
+def index() -> str:
     cars = CarSalesFields.query
     return render_template('table_generator.html', title="Car Selection", cars=cars)
 
 
 @app.route('/api/data')
-def data():
+def data() -> dict:
     query = CarSalesFields.query
 
     search = request.args.get('search[value]')
@@ -155,17 +173,28 @@ if __name__ == '__main__':
     parser = ArgumentParser(description='Parse PDF to SQLite')
     parser.add_argument('-pdf_path', required=True,
                         type=Path, help='Path to PDF file')
+    parser.add_argument('--json_path', default=None,
+                        type=Path, help='Path to JSON file')
 
     args = parser.parse_args()
 
     try:
-        with app.app_context():
-            db.drop_all()
-            db.create_all()
-            tables = read_pdf(args.pdf_path)
-            parse_pdf2db(tables)
+        if args.json_path is not None:
+            with app.app_context():
+                db.drop_all()
+                db.create_all()
+                tables = read_pdf(args.pdf_path)
+                parse_pdf2db(tables)
+                db2json(db, args.json_path)
+            print(f"Data has been converted to JSON and saved to {args.json_path}")
+        else:
+            with app.app_context():
+                db.drop_all()
+                db.create_all()
+                tables = read_pdf(args.pdf_path)
+                parse_pdf2db(tables)
 
-        app.run(debug=True)
+            app.run(debug=True)
 
     except ArgumentError as e:
         print(f'Error: {e}')

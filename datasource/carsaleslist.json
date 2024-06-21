@@ -1,0 +1,2852 @@
+[
+    {
+        "id": 34,
+        "model": 2020,
+        "brand": "ISUZU - NLR 85",
+        "transmission": "MT DSL",
+        "plate_no": "DAT 1217",
+        "mileage": "88,353",
+        "color": "ARC WHITE",
+        "price": "989,000.00"
+    },
+    {
+        "id": 35,
+        "model": 2020,
+        "brand": "ISUZU - NQR 75",
+        "transmission": "MT DSL",
+        "plate_no": "EAD 8135",
+        "mileage": "28,195",
+        "color": "ARC WHITE",
+        "price": "1,415,000.00"
+    },
+    {
+        "id": 36,
+        "model": 2019,
+        "brand": "JAC - X200",
+        "transmission": "MT DSL",
+        "plate_no": "NGD 1711",
+        "mileage": "53,995",
+        "color": "WHITE",
+        "price": "418,000.00"
+    },
+    {
+        "id": 37,
+        "model": 2021,
+        "brand": "KIA - K2500 4X4 DOUBLE CAB",
+        "transmission": "MT DSL",
+        "plate_no": "CAW 2115",
+        "mileage": "80,591",
+        "color": "WHITE",
+        "price": "634,000.00"
+    },
+    {
+        "id": 38,
+        "model": 2017,
+        "brand": "KIA - PICANTO",
+        "transmission": "MT GAS",
+        "plate_no": "GAC 5700",
+        "mileage": "92,797",
+        "color": "GALAXY BLACK",
+        "price": "211,000.00"
+    },
+    {
+        "id": 39,
+        "model": 2017,
+        "brand": "KIA - PICANTO",
+        "transmission": "AT GAS",
+        "plate_no": "GAD 3226",
+        "mileage": "143,605",
+        "color": "ALICE BLUE",
+        "price": "295,000.00"
+    },
+    {
+        "id": 40,
+        "model": 2023,
+        "brand": "MITSUBISHI - XPANDER",
+        "transmission": "AT GAS",
+        "plate_no": "NIT 4036 / Y3 K421",
+        "mileage": "5,171",
+        "color": "BLADE SILVER METALLIC",
+        "price": "872,000.00"
+    },
+    {
+        "id": 41,
+        "model": 2021,
+        "brand": "MITSUBISHI - L300 FB",
+        "transmission": "MT DSL",
+        "plate_no": "CBM 7165",
+        "mileage": "40,115",
+        "color": "POLAR WHITE",
+        "price": "744,000.00"
+    },
+    {
+        "id": 42,
+        "model": 2018,
+        "brand": "MITSUBISHI - MIRAGE",
+        "transmission": "AT GAS",
+        "plate_no": "NCS 8769",
+        "mileage": "117,737",
+        "color": "MAJESTIC RED",
+        "price": "328,000.00"
+    },
+    {
+        "id": 43,
+        "model": 2018,
+        "brand": "MITSUBISHI - MONTERO SPORT",
+        "transmission": "AT DSL",
+        "plate_no": "CAM 9276",
+        "mileage": "233,140",
+        "color": "TITANIUM GRAY",
+        "price": "717,000.00"
+    },
+    {
+        "id": 44,
+        "model": 2020,
+        "brand": "MITSUBISHI - MONTERO SPORT",
+        "transmission": "AT DSL",
+        "plate_no": "CAT 3918",
+        "mileage": "38,500",
+        "color": "GRAPHITE GRAY METALLIC",
+        "price": "1,312,000.00"
+    },
+    {
+        "id": 45,
+        "model": 2018,
+        "brand": "MITSUBISHI - STRADA",
+        "transmission": "AT DSL",
+        "plate_no": "NBP 9824",
+        "mileage": "107,454",
+        "color": "DIAMOND BLACK MICA",
+        "price": "710,000.00"
+    },
+    {
+        "id": 46,
+        "model": 2019,
+        "brand": "MITSUBISHI - XPANDER",
+        "transmission": "AT GAS",
+        "plate_no": "DAZ 5857",
+        "mileage": "43,744",
+        "color": "QUARTZ WHITE PEARL",
+        "price": "641,000.00"
+    },
+    {
+        "id": 47,
+        "model": 2023,
+        "brand": "MITSUBISHI - XPANDER",
+        "transmission": "AT GAS",
+        "plate_no": "NEE 4303",
+        "mileage": "10,314",
+        "color": "GRAPHITE.GRAY METALLIC",
+        "price": "930,000.00"
+    },
+    {
+        "id": 48,
+        "model": 2023,
+        "brand": "MITSUBISHI - XPANDER",
+        "transmission": "AT GAS",
+        "plate_no": "Y3 D914 / NIT 1520",
+        "mileage": "6,691",
+        "color": "BLADE SILVER METALLIC",
+        "price": "802,000.00"
+    },
+    {
+        "id": 49,
+        "model": 2024,
+        "brand": "MITSUBISHI - XPANDER",
+        "transmission": "AT GAS",
+        "plate_no": "Y4 E152 / NHG\r4482",
+        "mileage": "1,399",
+        "color": "JET BLACK MICA",
+        "price": "951,000.00"
+    },
+    {
+        "id": 50,
+        "model": 2019,
+        "brand": "MITSUBISHI - XPANDER GLS SPORT",
+        "transmission": "AT GAS",
+        "plate_no": "CAP 4596",
+        "mileage": "110,236",
+        "color": "QUARTZ WHITE PEARL",
+        "price": "640,000.00"
+    },
+    {
+        "id": 51,
+        "model": 2020,
+        "brand": "MITSUBISHI MIRAGE G4 GLS",
+        "transmission": "AT GAS",
+        "plate_no": "CAV 4041",
+        "mileage": "86,308",
+        "color": "MAJESTIC RED",
+        "price": "422,000.00"
+    },
+    {
+        "id": 52,
+        "model": 2019,
+        "brand": "MITSUBISHI MIRAGE G4 GLS",
+        "transmission": "AT GAS",
+        "plate_no": "VAA 8803",
+        "mileage": "77,560",
+        "color": "WINE RED PEARL",
+        "price": "326,000.00"
+    },
+    {
+        "id": 53,
+        "model": 2019,
+        "brand": "MITSUBISHI MIRAGE G4 GLS",
+        "transmission": "AT GAS",
+        "plate_no": "NFU 9376",
+        "mileage": "40,545",
+        "color": "SAVANNA WHITE",
+        "price": "356,000.00"
+    },
+    {
+        "id": 54,
+        "model": 2022,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "MT GAS",
+        "plate_no": "CBE 7145",
+        "mileage": "32,291",
+        "color": "TITANIUM GRAY METALLIC",
+        "price": "497,000.00"
+    },
+    {
+        "id": 55,
+        "model": 2021,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "AT GAS",
+        "plate_no": "CBL 9814",
+        "mileage": "14,909",
+        "color": "VIRGIL GRAY",
+        "price": "521,000.00"
+    },
+    {
+        "id": 56,
+        "model": 2023,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "AT GAS",
+        "plate_no": "NIN 4948",
+        "mileage": "27,553",
+        "color": "COOL SILVER METALLIC",
+        "price": "562,000.00"
+    },
+    {
+        "id": 57,
+        "model": 2024,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "AT GAS",
+        "plate_no": "NIR 9170 / Y4 K460",
+        "mileage": "5,532",
+        "color": "RED METALLIC",
+        "price": "622,000.00"
+    },
+    {
+        "id": 58,
+        "model": 2024,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "AT GAS",
+        "plate_no": "BAF 4643 / Y3 T396",
+        "mileage": "7,628",
+        "color": "TITANIUM GRAY METALLIC",
+        "price": "591,000.00"
+    },
+    {
+        "id": 59,
+        "model": 2020,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "AT GAS",
+        "plate_no": "CAV 8780",
+        "mileage": "99,120",
+        "color": "MAJESTIC RED",
+        "price": "323,000.00"
+    },
+    {
+        "id": 60,
+        "model": 2019,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "MT GAS",
+        "plate_no": "CAU 1072",
+        "mileage": "59,293",
+        "color": "VIRGIL GRAY",
+        "price": "344,000.00"
+    },
+    {
+        "id": 61,
+        "model": 2020,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "MT GAS",
+        "plate_no": "BAE 4861",
+        "mileage": "46,268",
+        "color": "WINE RED",
+        "price": "403,000.00"
+    },
+    {
+        "id": 62,
+        "model": 2021,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "AT GAS",
+        "plate_no": "NEL 5702",
+        "mileage": "25,410",
+        "color": "MAJESTIC RED",
+        "price": "426,000.00"
+    },
+    {
+        "id": 63,
+        "model": 2023,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "MT GAS",
+        "plate_no": "BAF 4633 / Y3 J304",
+        "mileage": "3,299",
+        "color": "TITANIUM GRAY METALLIC",
+        "price": "457,000.00"
+    },
+    {
+        "id": 64,
+        "model": 2022,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "MT GAS",
+        "plate_no": "BAC 5372",
+        "mileage": "9,689",
+        "color": "COOL SILVER METALLIC",
+        "price": "475,000.00"
+    },
+    {
+        "id": 65,
+        "model": 2023,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "AT GAS",
+        "plate_no": "BAF 4650 / Y3 N350",
+        "mileage": "14,267",
+        "color": "TITANIUM GRAY METALLIC",
+        "price": "583,000.00"
+    },
+    {
+        "id": 66,
+        "model": 2024,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "AT GAS",
+        "plate_no": "Y3 Y616 / CCA2629",
+        "mileage": "6,074",
+        "color": "TITANIUM GRAY METALLIC",
+        "price": "608,000.00"
+    },
+    {
+        "id": 67,
+        "model": 2022,
+        "brand": "MORRIS GARAGES - MG 5",
+        "transmission": "MT GAS",
+        "plate_no": "DAR 5777",
+        "mileage": "35,480",
+        "color": "RED",
+        "price": "414,000.00"
+    },
+    {
+        "id": 68,
+        "model": 2020,
+        "brand": "MORRIS GARAGES - ZS STYLE",
+        "transmission": "AT GAS",
+        "plate_no": "NGN 2308",
+        "mileage": "39,508",
+        "color": "BLACK",
+        "price": "420,000.00"
+    },
+    {
+        "id": 69,
+        "model": 2018,
+        "brand": "NISSAN - ALMERA",
+        "transmission": "MT GAS",
+        "plate_no": "NBQ 6360",
+        "mileage": "19,548",
+        "color": "TITANIUM GREY",
+        "price": "262,000.00"
+    },
+    {
+        "id": 70,
+        "model": 2020,
+        "brand": "NISSAN - NAVARA",
+        "transmission": "MT DSL",
+        "plate_no": "IAC 5898",
+        "mileage": "50,759",
+        "color": "BRILLIANT SILVER",
+        "price": "847,000.00"
+    },
+    {
+        "id": 71,
+        "model": 2024,
+        "brand": "NISSAN - NAVARA",
+        "transmission": "MT DSL",
+        "plate_no": "BAF 4865 / F6 J491",
+        "mileage": "11,693",
+        "color": "GALAXY BLACK",
+        "price": "978,000.00"
+    },
+    {
+        "id": 72,
+        "model": 2021,
+        "brand": "NISSAN - NAVARA",
+        "transmission": "AT DSL",
+        "plate_no": "CAW 4209",
+        "mileage": "89,263",
+        "color": "GALAXY BLACK",
+        "price": "1,028,000.00"
+    },
+    {
+        "id": 73,
+        "model": 2021,
+        "brand": "NISSAN -  NAVARA",
+        "transmission": "AT DSL",
+        "plate_no": "NGU 2689",
+        "mileage": "87,588",
+        "color": "GALAXY BLACK",
+        "price": "730,000.00"
+    },
+    {
+        "id": 75,
+        "model": 2019,
+        "brand": "NISSAN - TERRA 2.5L EL 4X2 A/T",
+        "transmission": "AT DSL",
+        "plate_no": "EAB 8344",
+        "mileage": "105,413",
+        "color": "BRILLIANT SILVER",
+        "price": "803,000.00"
+    },
+    {
+        "id": 76,
+        "model": 2023,
+        "brand": "SUZUKI - DZIRE",
+        "transmission": "MT GAS",
+        "plate_no": "NHD 4540",
+        "mileage": "19,269",
+        "color": "BLACK",
+        "price": "419,000.00"
+    },
+    {
+        "id": 77,
+        "model": 2022,
+        "brand": "SUZUKI - DZIRE",
+        "transmission": "AT GAS",
+        "plate_no": "FAJ 4244",
+        "mileage": "8,642",
+        "color": "RED",
+        "price": "500,000.00"
+    },
+    {
+        "id": 78,
+        "model": 2020,
+        "brand": "SUZUKI - ERTIGA",
+        "transmission": "MT GAS",
+        "plate_no": "NFW 2074",
+        "mileage": "87,303",
+        "color": "GRAY",
+        "price": "520,000.00"
+    },
+    {
+        "id": 79,
+        "model": 2023,
+        "brand": "SUZUKI - ERTIGA",
+        "transmission": "MT GAS",
+        "plate_no": "VAB 3744",
+        "mileage": "28,824",
+        "color": "BLACK",
+        "price": "624,000.00"
+    },
+    {
+        "id": 80,
+        "model": 2019,
+        "brand": "SUZUKI - SWIFT",
+        "transmission": "AT GAS",
+        "plate_no": "NED4436",
+        "mileage": "47,870",
+        "color": "PEARL PURE WHITE",
+        "price": "471,000.00"
+    },
+    {
+        "id": 81,
+        "model": 2021,
+        "brand": "TOYOTA - FORTUNER",
+        "transmission": "AT DSL",
+        "plate_no": "EAE 3160",
+        "mileage": "79,117",
+        "color": "ATTITUDE BLACK\rMC/WHITE PEARL",
+        "price": "1,417,000.00"
+    },
+    {
+        "id": 82,
+        "model": 2020,
+        "brand": "TOYOTA - HI-ACE",
+        "transmission": "MT DSL",
+        "plate_no": "HAC 5643",
+        "mileage": "96,722",
+        "color": "SILVER METALLIC",
+        "price": "904,000.00"
+    },
+    {
+        "id": 83,
+        "model": 2019,
+        "brand": "TOYOTA - HI-LUX 4X2",
+        "transmission": "MT DSL",
+        "plate_no": "HAB 8775",
+        "mileage": "67,721",
+        "color": "GRAY METALLIC",
+        "price": "769,000.00"
+    },
+    {
+        "id": 84,
+        "model": 2019,
+        "brand": "TOYOTA - INNOVA",
+        "transmission": "MT DSL",
+        "plate_no": "DAN 1750",
+        "mileage": "93,258",
+        "color": "THERMALYTE",
+        "price": "694,000.00"
+    },
+    {
+        "id": 85,
+        "model": 2020,
+        "brand": "TOYOTA - VIOS",
+        "transmission": "MT GAS",
+        "plate_no": "EAD 8939",
+        "mileage": "43,088",
+        "color": "GREYISH BLUE MICA\rMETALLIC",
+        "price": "435,000.00"
+    },
+    {
+        "id": 86,
+        "model": 2020,
+        "brand": "TOYOTA - VIOS",
+        "transmission": "AT GAS",
+        "plate_no": "CAT 2318",
+        "mileage": "46,265",
+        "color": "FREEDOM WHITE",
+        "price": "538,000.00"
+    },
+    {
+        "id": 87,
+        "model": 2020,
+        "brand": "TOYOTA - VIOS",
+        "transmission": "MT GAS",
+        "plate_no": "CAV  7425",
+        "mileage": "44,915",
+        "color": "FREEDOM WHITE",
+        "price": "345,000.00"
+    },
+    {
+        "id": 88,
+        "model": 2019,
+        "brand": "TOYOTA - VIOS",
+        "transmission": "MT GAS",
+        "plate_no": "CAS 8690",
+        "mileage": "94,138",
+        "color": "BLACKISH RED MICA",
+        "price": "413,000.00"
+    },
+    {
+        "id": 89,
+        "model": 2022,
+        "brand": "TOYOTA - WIGO",
+        "transmission": "AT GAS",
+        "plate_no": "S4 B562 / EAE6712",
+        "mileage": "13,702",
+        "color": "WHITE",
+        "price": "484,000.00"
+    },
+    {
+        "id": 90,
+        "model": 2021,
+        "brand": "TOYOTA - WIGO",
+        "transmission": "AT GAS",
+        "plate_no": "EAE 3012",
+        "mileage": "40,508",
+        "color": "BLACK",
+        "price": "392,000.00"
+    },
+    {
+        "id": 91,
+        "model": 2020,
+        "brand": "CHERY - TIGGO 2",
+        "transmission": "AT GAS",
+        "plate_no": "NGO 2319",
+        "mileage": "43,216",
+        "color": "RED",
+        "price": "557,000.00"
+    },
+    {
+        "id": 92,
+        "model": 2013,
+        "brand": "CHEVROLET - SONIC",
+        "transmission": "AT GAS",
+        "plate_no": "WIB 589",
+        "mileage": "60,106",
+        "color": "BLACK",
+        "price": "244,000.00"
+    },
+    {
+        "id": 93,
+        "model": 2018,
+        "brand": "FORD - EVEREST",
+        "transmission": "MT DSL",
+        "plate_no": "IAC 4807",
+        "mileage": "62,921",
+        "color": "ALUMINUM METALLIC",
+        "price": "780,000.00"
+    },
+    {
+        "id": 94,
+        "model": 2017,
+        "brand": "FORD - EVEREST",
+        "transmission": "AT DSL",
+        "plate_no": "NAT 5370",
+        "mileage": "74,384",
+        "color": "ARCTIC WHITE",
+        "price": "847,000.00"
+    },
+    {
+        "id": 95,
+        "model": 2020,
+        "brand": "FORD - RANGER",
+        "transmission": "AT DSL",
+        "plate_no": "C2M773",
+        "mileage": "43,161",
+        "color": "BLUE LIGHTNING",
+        "price": "1,556,000.00"
+    },
+    {
+        "id": 96,
+        "model": 2020,
+        "brand": "HONDA - BRV",
+        "transmission": "AT GAS",
+        "plate_no": "NGD 1572",
+        "mileage": "82,304",
+        "color": "LUNAR SILVER METALLIC",
+        "price": "656,000.00"
+    },
+    {
+        "id": 97,
+        "model": 2018,
+        "brand": "HONDA - CITY",
+        "transmission": "AT GAS",
+        "plate_no": "NAJ 4838",
+        "mileage": "44,815",
+        "color": "MODERN STEEL",
+        "price": "489,000.00"
+    },
+    {
+        "id": 98,
+        "model": 2016,
+        "brand": "HONDA - CITY",
+        "transmission": "AT GAS",
+        "plate_no": "NBW 2031 / 130110",
+        "mileage": "107,147",
+        "color": "CRYSTAL BLACK",
+        "price": "422,000.00"
+    },
+    {
+        "id": 99,
+        "model": 2019,
+        "brand": "HONDA - CITY",
+        "transmission": "MT GAS",
+        "plate_no": "BAA 2268",
+        "mileage": "97,503",
+        "color": "TAFFETA WHITE",
+        "price": "441,000.00"
+    },
+    {
+        "id": 100,
+        "model": 2016,
+        "brand": "HONDA - JAZZ",
+        "transmission": "AT GAS",
+        "plate_no": "DS 6304",
+        "mileage": "48,977",
+        "color": "RALLYE RED",
+        "price": "549,000.00"
+    },
+    {
+        "id": 101,
+        "model": 2017,
+        "brand": "HONDA - MOBILIO",
+        "transmission": "AT GAS",
+        "plate_no": "NBD 8881",
+        "mileage": "86,833",
+        "color": "TAFFETA WHITE",
+        "price": "461,000.00"
+    },
+    {
+        "id": 102,
+        "model": 2015,
+        "brand": "HYUNDAI - GRAND STAREX",
+        "transmission": "MT DSL",
+        "plate_no": "NBW 8239",
+        "mileage": "98,018",
+        "color": "TIMELESS BLACK",
+        "price": "521,000.00"
+    },
+    {
+        "id": 103,
+        "model": 2020,
+        "brand": "HYUNDAI - H100",
+        "transmission": "MT DSL",
+        "plate_no": "DAO 4568",
+        "mileage": "246,986",
+        "color": "CREAMY WHITE",
+        "price": "445,000.00"
+    },
+    {
+        "id": 104,
+        "model": 2020,
+        "brand": "HYUNDAI - H100",
+        "transmission": "MT DSL",
+        "plate_no": "NGN 4540",
+        "mileage": "98,222",
+        "color": "CREAMY WHITE",
+        "price": "425,000.00"
+    },
+    {
+        "id": 105,
+        "model": 2023,
+        "brand": "HYUNDAI - H100",
+        "transmission": "MT DSL",
+        "plate_no": "K3 C800 / NIQ 8310",
+        "mileage": "1,049",
+        "color": "WHITE",
+        "price": "919,000.00"
+    },
+    {
+        "id": 106,
+        "model": 2016,
+        "brand": "HYUNDAI - TUCSON",
+        "transmission": "AT DSL",
+        "plate_no": "NAB 9760",
+        "mileage": "17,443",
+        "color": "WHITE",
+        "price": "635,000.00"
+    },
+    {
+        "id": 107,
+        "model": 2016,
+        "brand": "ISUZU - CROSSWIND",
+        "transmission": "MT DSL",
+        "plate_no": "NDW 7488 / 130104",
+        "mileage": "70,114",
+        "color": "GARNET RED",
+        "price": "371,000.00"
+    },
+    {
+        "id": 108,
+        "model": 2017,
+        "brand": "ISUZU - D-MAX",
+        "transmission": "MT DSL",
+        "plate_no": "HAA 4034",
+        "mileage": "115,877",
+        "color": "COSMIC BLACK MICA",
+        "price": "646,000.00"
+    },
+    {
+        "id": 109,
+        "model": 2018,
+        "brand": "ISUZU - D-MAX",
+        "transmission": "AT DSL",
+        "plate_no": "NAM 4823",
+        "mileage": "73,102",
+        "color": "TITANIUM SILVER",
+        "price": "647,000.00"
+    },
+    {
+        "id": 110,
+        "model": 2016,
+        "brand": "KIA - RIO",
+        "transmission": "AT GAS",
+        "plate_no": "NBN 7919",
+        "mileage": "50,637",
+        "color": "CLEAR WHITE",
+        "price": "332,000.00"
+    },
+    {
+        "id": 111,
+        "model": 2019,
+        "brand": "KIA - SOLUTO",
+        "transmission": "AT GAS",
+        "plate_no": "CAS 4172",
+        "mileage": "79,474",
+        "color": "BLUE",
+        "price": "309,000.00"
+    },
+    {
+        "id": 112,
+        "model": 2016,
+        "brand": "MITSUBISHI - ADVENTURE",
+        "transmission": "MT DSL",
+        "plate_no": "DDL 9619 / ADL\r9619",
+        "mileage": "231,573",
+        "color": "SOPORIFIC BLACK",
+        "price": "331,000.00"
+    },
+    {
+        "id": 113,
+        "model": 2016,
+        "brand": "MITSUBISHI - ADVENTURE",
+        "transmission": "MT DSL",
+        "plate_no": "ADM 1435 / DDM\r1435",
+        "mileage": "59,977",
+        "color": "POLAR WHITE",
+        "price": "403,000.00"
+    },
+    {
+        "id": 114,
+        "model": 2017,
+        "brand": "MITSUBISHI - L300 DE LUXE 2.5",
+        "transmission": "MT DSL",
+        "plate_no": "B2 B111",
+        "mileage": "31,694",
+        "color": "POLAR WHITE",
+        "price": "373,000.00"
+    },
+    {
+        "id": 115,
+        "model": 2020,
+        "brand": "MITSUBISHI - L300 FB",
+        "transmission": "MT DSL",
+        "plate_no": "B7 U591",
+        "mileage": "39,040",
+        "color": "POLAR WHITE",
+        "price": "797,000.00"
+    },
+    {
+        "id": 116,
+        "model": 2020,
+        "brand": "MITSUBISHI - L300 FB",
+        "transmission": "MT DSL",
+        "plate_no": "CAV 5078",
+        "mileage": "34,114",
+        "color": "POLAR WHITE",
+        "price": "584,000.00"
+    },
+    {
+        "id": 117,
+        "model": 2018,
+        "brand": "MITSUBISHI - MONTERO SPORT",
+        "transmission": "MT DSL",
+        "plate_no": "EAB 5405",
+        "mileage": "115,495",
+        "color": "MEDIUM RED",
+        "price": "749,000.00"
+    },
+    {
+        "id": 118,
+        "model": 2018,
+        "brand": "MITSUBISHI - MONTERO SPORT",
+        "transmission": "AT DSL",
+        "plate_no": "DAJ 6055",
+        "mileage": "45,523",
+        "color": "PEARL WHITE",
+        "price": "886,000.00"
+    },
+    {
+        "id": 120,
+        "model": 2016,
+        "brand": "MITSUBISHI MIRAGE G4 GLS",
+        "transmission": "MT GAS",
+        "plate_no": "ACP 9276 / DCP\r9276",
+        "mileage": "117,473",
+        "color": "WINE RED PEARL",
+        "price": "240,000.00"
+    },
+    {
+        "id": 121,
+        "model": 2016,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "AT GAS",
+        "plate_no": "NDG 6285",
+        "mileage": "43,324",
+        "color": "MAJESTIC RED",
+        "price": "300,000.00"
+    },
+    {
+        "id": 122,
+        "model": 2018,
+        "brand": "NISSAN - JUKE 1.6 CVT",
+        "transmission": "AT GAS",
+        "plate_no": "NBH 5651",
+        "mileage": "56,319",
+        "color": "PEARL WHITE",
+        "price": "500,000.00"
+    },
+    {
+        "id": 123,
+        "model": 2019,
+        "brand": "NISSAN - NAVARA",
+        "transmission": "AT DSL",
+        "plate_no": "NDO 6430",
+        "mileage": "97,628",
+        "color": "SAVANNA ORANGE",
+        "price": "802,000.00"
+    },
+    {
+        "id": 124,
+        "model": 2020,
+        "brand": "NISSAN - SYLPHY 1.6L CVT AT",
+        "transmission": "AT GAS",
+        "plate_no": "NDO 2455",
+        "mileage": "129,674",
+        "color": "DEEP IRIS GRAY",
+        "price": "501,000.00"
+    },
+    {
+        "id": 125,
+        "model": 2020,
+        "brand": "NISSAN - TERRA 2.5L VL 4X2 A/T",
+        "transmission": "AT DSL",
+        "plate_no": "NEP 6745",
+        "mileage": "25,434",
+        "color": "GALAXY BLACK",
+        "price": "1,254,000.00"
+    },
+    {
+        "id": 126,
+        "model": 2018,
+        "brand": "SUZUKI - ERTIGA",
+        "transmission": "MT GAS",
+        "plate_no": "NBK 4420",
+        "mileage": "109,633",
+        "color": "RED",
+        "price": "415,000.00"
+    },
+    {
+        "id": 127,
+        "model": 2017,
+        "brand": "TOYOTA - AVANZA",
+        "transmission": "AT GAS",
+        "plate_no": "NCN 8112",
+        "mileage": "135,725",
+        "color": "NEBULA BLUE METALLIC",
+        "price": "422,000.00"
+    },
+    {
+        "id": 128,
+        "model": 2019,
+        "brand": "TOYOTA - AVANZA",
+        "transmission": "AT GAS",
+        "plate_no": "NBH 5432",
+        "mileage": "62,257",
+        "color": "GRAY METALLIC",
+        "price": "542,000.00"
+    },
+    {
+        "id": 129,
+        "model": 2019,
+        "brand": "TOYOTA - HI-ACE",
+        "transmission": "MT DSL",
+        "plate_no": "NDA 3353",
+        "mileage": "86,983",
+        "color": "SILVER METALLIC",
+        "price": "776,000.00"
+    },
+    {
+        "id": 130,
+        "model": 2019,
+        "brand": "TOYOTA - HI-LUX 4X2",
+        "transmission": "AT DSL",
+        "plate_no": "DAL 1677",
+        "mileage": "128,626",
+        "color": "FREEDOM WHITE",
+        "price": "1,022,000.00"
+    },
+    {
+        "id": 131,
+        "model": 2020,
+        "brand": "TOYOTA - RUSH 1.5 G A/T",
+        "transmission": "AT GAS",
+        "plate_no": "DAZ 4662 / P6\rM130",
+        "mileage": "42,030",
+        "color": "BLACK METALLIC",
+        "price": "689,000.00"
+    },
+    {
+        "id": 132,
+        "model": 2019,
+        "brand": "TOYOTA - RUSH 1.5E MT SUV",
+        "transmission": "MT GAS",
+        "plate_no": "DAN 6551",
+        "mileage": "39,422",
+        "color": "DARK RED MICA METALLIC",
+        "price": "626,000.00"
+    },
+    {
+        "id": 133,
+        "model": 2021,
+        "brand": "TOYOTA - VIOS",
+        "transmission": "AT GAS",
+        "plate_no": "CBK 2910",
+        "mileage": "41,580",
+        "color": "ALUMINA JADE METALLIC",
+        "price": "491,000.00"
+    },
+    {
+        "id": 135,
+        "model": 2020,
+        "brand": "FORD - RANGER",
+        "transmission": "AT DIESEL",
+        "plate_no": "NGK 1046",
+        "mileage": "67,432",
+        "color": "WHITE",
+        "price": "763,000.00"
+    },
+    {
+        "id": 136,
+        "model": 2014,
+        "brand": "FORD - RANGER",
+        "transmission": "MT DSL",
+        "plate_no": "HBG 678",
+        "mileage": "120,878",
+        "color": "BLACK MICA",
+        "price": "544,000.00"
+    },
+    {
+        "id": 137,
+        "model": 2014,
+        "brand": "FOTON - TORNADO 2 E SERIES",
+        "transmission": "MT DSL",
+        "plate_no": "AAV 8657",
+        "mileage": "308,505",
+        "color": "WHITE",
+        "price": "255,000.00"
+    },
+    {
+        "id": 138,
+        "model": 2022,
+        "brand": "GEELY - EMGRAND COMFORT SEDAN",
+        "transmission": "AT GAS",
+        "plate_no": "DBH 9657",
+        "mileage": "8,657",
+        "color": "GREY",
+        "price": "518,000.00"
+    },
+    {
+        "id": 139,
+        "model": 2022,
+        "brand": "GEELY - EMGRAND PREMIUM SEDAN",
+        "transmission": "AT GAS",
+        "plate_no": "DBI 3548",
+        "mileage": "2,723",
+        "color": "GREY",
+        "price": "668,000.00"
+    },
+    {
+        "id": 140,
+        "model": 2023,
+        "brand": "GEELY - OKAVANGO",
+        "transmission": "AT GAS",
+        "plate_no": "DBI 6002",
+        "mileage": "3,776",
+        "color": "WHITE",
+        "price": "1,080,000.00"
+    },
+    {
+        "id": 141,
+        "model": 2020,
+        "brand": "HONDA - BRIO",
+        "transmission": "AT GAS",
+        "plate_no": "EAF 7196",
+        "mileage": "58,005",
+        "color": "PHOENIX ORANGE PEARL",
+        "price": "491,000.00"
+    },
+    {
+        "id": 142,
+        "model": 2018,
+        "brand": "HONDA - CITY",
+        "transmission": "AT GAS",
+        "plate_no": "NCU 2615",
+        "mileage": "108,493",
+        "color": "RUBY RED",
+        "price": "473,000.00"
+    },
+    {
+        "id": 143,
+        "model": 2018,
+        "brand": "HONDA - CRV",
+        "transmission": "AT DSL",
+        "plate_no": "NBA 9315",
+        "mileage": "32,732",
+        "color": "CRYSTAL BLACK",
+        "price": "1,187,000.00"
+    },
+    {
+        "id": 144,
+        "model": 2019,
+        "brand": "HYUNDAI - ACCENT",
+        "transmission": "AT GAS",
+        "plate_no": "NEC 4262",
+        "mileage": "-",
+        "color": "BLUE",
+        "price": "332,000.00"
+    },
+    {
+        "id": 145,
+        "model": 2016,
+        "brand": "HYUNDAI - ACCENT",
+        "transmission": "AT GAS",
+        "plate_no": "EAA 2538",
+        "mileage": "82,416",
+        "color": "SLEEK SILVER",
+        "price": "304,000.00"
+    },
+    {
+        "id": 146,
+        "model": 2019,
+        "brand": "HYUNDAI - ACCENT",
+        "transmission": "AT GAS",
+        "plate_no": "NEH 1234",
+        "mileage": "54,174",
+        "color": "FIERY RED",
+        "price": "351,000.00"
+    },
+    {
+        "id": 147,
+        "model": 2016,
+        "brand": "HYUNDAI - EON",
+        "transmission": "MT GAS",
+        "plate_no": "ECR 1824",
+        "mileage": "47,907",
+        "color": "PRISTINE BLUE",
+        "price": "214,000.00"
+    },
+    {
+        "id": 148,
+        "model": 2019,
+        "brand": "HYUNDAI - H100",
+        "transmission": "MT DSL",
+        "plate_no": "K0 N277 / NED5114",
+        "mileage": "-",
+        "color": "CREAMY WHITE",
+        "price": "120,000.00"
+    },
+    {
+        "id": 149,
+        "model": 2019,
+        "brand": "HYUNDAI - H100",
+        "transmission": "MT DSL",
+        "plate_no": "K0 S895 / NED3770",
+        "mileage": "-",
+        "color": "CREAMY WHITE",
+        "price": "125,000.00"
+    },
+    {
+        "id": 150,
+        "model": 2019,
+        "brand": "HYUNDAI - H100",
+        "transmission": "MT DSL",
+        "plate_no": "NED 5326",
+        "mileage": "159,726",
+        "color": "CREAMY WHITE",
+        "price": "450,000.00"
+    },
+    {
+        "id": 151,
+        "model": 2019,
+        "brand": "HYUNDAI - H100",
+        "transmission": "MT DSL",
+        "plate_no": "NED 8289",
+        "mileage": "96,778",
+        "color": "CREAMY WHITE",
+        "price": "490,000.00"
+    },
+    {
+        "id": 152,
+        "model": 2020,
+        "brand": "HYUNDAI - H100",
+        "transmission": "MT DSL",
+        "plate_no": "NGN 6291",
+        "mileage": "63,284",
+        "color": "CREAMY WHITE",
+        "price": "496,000.00"
+    },
+    {
+        "id": 153,
+        "model": 2020,
+        "brand": "HYUNDAI - H100",
+        "transmission": "MT DSL",
+        "plate_no": "NFW 3050",
+        "mileage": "113,044",
+        "color": "CREAMY WHITE",
+        "price": "548,000.00"
+    },
+    {
+        "id": 154,
+        "model": 2019,
+        "brand": "KIA - K2500 KARGA BODY 4X2 UTI",
+        "transmission": "MT DSL",
+        "plate_no": "NGD 2803",
+        "mileage": "62,585",
+        "color": "CLEAR WHITE",
+        "price": "557,000.00"
+    },
+    {
+        "id": 155,
+        "model": 2023,
+        "brand": "KIA - SOLUTO",
+        "transmission": "AT GAS",
+        "plate_no": "DBJ4608 / X0 X485",
+        "mileage": "6,546",
+        "color": "RED",
+        "price": "699,000.00"
+    },
+    {
+        "id": 156,
+        "model": 2020,
+        "brand": "KIA - SOLUTO",
+        "transmission": "MT GAS",
+        "plate_no": "DAP 2854",
+        "mileage": "17,347",
+        "color": "BLUE STREAM",
+        "price": "402,000.00"
+    },
+    {
+        "id": 157,
+        "model": 2023,
+        "brand": "MITSUBISHI - L300 FB",
+        "transmission": "MT DSL",
+        "plate_no": "NIR 7870",
+        "mileage": "5,465",
+        "color": "POLAR WHITE",
+        "price": "667,000.00"
+    },
+    {
+        "id": 158,
+        "model": 2023,
+        "brand": "MITSUBISHI - L300 FB",
+        "transmission": "MT DSL",
+        "plate_no": "DBG 8787",
+        "mileage": "18,448",
+        "color": "POLAR WHITE",
+        "price": "689,000.00"
+    },
+    {
+        "id": 159,
+        "model": 2017,
+        "brand": "MITSUBISHI - MIRAGE",
+        "transmission": "AT GAS",
+        "plate_no": "VAA 1927",
+        "mileage": "19,202",
+        "color": "COOL SILVER",
+        "price": "374,000.00"
+    },
+    {
+        "id": 160,
+        "model": 2024,
+        "brand": "MITSUBISHI - MIRAGE",
+        "transmission": "AT GAS",
+        "plate_no": "Y4 L703 / NIT 9850",
+        "mileage": "2,768",
+        "color": "TITANIUM GRAY METALLIC",
+        "price": "572,000.00"
+    },
+    {
+        "id": 161,
+        "model": 2023,
+        "brand": "MITSUBISHI - STRADA",
+        "transmission": "AT DSL",
+        "plate_no": "DBH 2972",
+        "mileage": "11,663",
+        "color": "GRAPHITE GRAY METALLIC",
+        "price": "997,000.00"
+    },
+    {
+        "id": 162,
+        "model": 2023,
+        "brand": "MITSUBISHI - STRADA",
+        "transmission": "MT DSL",
+        "plate_no": "DBH 3545",
+        "mileage": "7,549",
+        "color": "JET BLACK MICA",
+        "price": "1,011,000.00"
+    },
+    {
+        "id": 163,
+        "model": 2019,
+        "brand": "MITSUBISHI - XPANDER GLS SPORT",
+        "transmission": "AT GAS",
+        "plate_no": "NGM 6862",
+        "mileage": "42,755",
+        "color": "JET BLACK MICA",
+        "price": "701,000.00"
+    },
+    {
+        "id": 164,
+        "model": 2016,
+        "brand": "MITSUBISHI - L300 DE LUXE 2.5",
+        "transmission": "MT DSL",
+        "plate_no": "DCQ 2824",
+        "mileage": "298,505",
+        "color": "POLAR WHITE",
+        "price": "288,000.00"
+    },
+    {
+        "id": 165,
+        "model": 2020,
+        "brand": "MITSUBISHI MIRAGE G4 GLS",
+        "transmission": "AT GAS",
+        "plate_no": "DAT 8081",
+        "mileage": "46,166",
+        "color": "MAJESTIC RED",
+        "price": "414,000.00"
+    },
+    {
+        "id": 214,
+        "model": 2023,
+        "brand": "FORD - TERRITORY",
+        "transmission": "AT GAS",
+        "plate_no": "HAG 4478",
+        "mileage": "23,987",
+        "color": "PANTHER BLACK",
+        "price": "886,000.00"
+    },
+    {
+        "id": 215,
+        "model": 2020,
+        "brand": "HYUNDAI - ACCENT",
+        "transmission": "MT DSL",
+        "plate_no": "GAU 5415",
+        "mileage": "93,833",
+        "color": "POLAR WHITE",
+        "price": "403,000.00"
+    },
+    {
+        "id": 216,
+        "model": 2017,
+        "brand": "ISUZU - MU-X 4X2 AT (LS-A)",
+        "transmission": "AT DSL",
+        "plate_no": "NAF 8221",
+        "mileage": "133,927",
+        "color": "TITANIUM SILVER",
+        "price": "691,000.00"
+    },
+    {
+        "id": 217,
+        "model": 2017,
+        "brand": "KIA - RIO",
+        "transmission": "MT GAS",
+        "plate_no": "HAA 2052",
+        "mileage": "105,656",
+        "color": "URBAN BLUE",
+        "price": "269,000.00"
+    },
+    {
+        "id": 218,
+        "model": 2020,
+        "brand": "KIA - SOLUTO",
+        "transmission": "MT GAS",
+        "plate_no": "HAC 2203",
+        "mileage": "85,724",
+        "color": "BLACK",
+        "price": "338,000.00"
+    },
+    {
+        "id": 219,
+        "model": 2023,
+        "brand": "KIA STONIC",
+        "transmission": "MT GAS",
+        "plate_no": "HAG 5162",
+        "mileage": "7,445",
+        "color": "CLEAR WHITE",
+        "price": "574,000.00"
+    },
+    {
+        "id": 220,
+        "model": 2021,
+        "brand": "MITSUBISHI - L300 FB",
+        "transmission": "MT DSL",
+        "plate_no": "GAV 4152",
+        "mileage": "96,973",
+        "color": "POLAR WHITE",
+        "price": "530,000.00"
+    },
+    {
+        "id": 221,
+        "model": 2019,
+        "brand": "MITSUBISHI - XPANDER",
+        "transmission": "AT GAS",
+        "plate_no": "GAO 7591",
+        "mileage": "31,943",
+        "color": "TITANIUM GRAY",
+        "price": "681,000.00"
+    },
+    {
+        "id": 222,
+        "model": 2016,
+        "brand": "MITSUBISHI MIRAGE G4 GLS",
+        "transmission": "MT GAS",
+        "plate_no": "ADN 2966 / 070105",
+        "mileage": "49,937",
+        "color": "MEDIUM BLUE MICA",
+        "price": "310,000.00"
+    },
+    {
+        "id": 223,
+        "model": 2020,
+        "brand": "MITSUBISHI MIRAGE G4 GLS",
+        "transmission": "AT GAS",
+        "plate_no": "GAO 8554",
+        "mileage": "40,718",
+        "color": "MAJESTIC RED",
+        "price": "453,000.00"
+    },
+    {
+        "id": 224,
+        "model": 2022,
+        "brand": "MORRIS GARAGES - MG 5",
+        "transmission": "AT GAS",
+        "plate_no": "HAC 2494",
+        "mileage": "34,358",
+        "color": "EXTREME SPEED RED",
+        "price": "414,000.00"
+    },
+    {
+        "id": 225,
+        "model": 2019,
+        "brand": "MORRIS GARAGES - ZS ALPHA",
+        "transmission": "AT GAS",
+        "plate_no": "HAB 6454 / W0",
+        "mileage": "54,298",
+        "color": "MOON WHITE",
+        "price": "517,000.00"
+    },
+    {
+        "id": 226,
+        "model": 2022,
+        "brand": "MORRIS GARAGES - ZS ALPHA",
+        "transmission": "AT GAS",
+        "plate_no": "HAG 1166",
+        "mileage": "16,473",
+        "color": "EXTREME SPEED RED",
+        "price": "556,000.00"
+    },
+    {
+        "id": 227,
+        "model": 2021,
+        "brand": "NISSAN -  NAVARA",
+        "transmission": "AT DSL",
+        "plate_no": "HAC 8800",
+        "mileage": "73,182",
+        "color": "FIERY RED",
+        "price": "1,132,000.00"
+    },
+    {
+        "id": 228,
+        "model": 2018,
+        "brand": "NISSAN - ALMERA",
+        "transmission": "MT GAS",
+        "plate_no": "GAE 9791",
+        "mileage": "35,761",
+        "color": "TITANIUM GREY",
+        "price": "387,000.00"
+    },
+    {
+        "id": 229,
+        "model": 2017,
+        "brand": "NISSAN - ALMERA",
+        "transmission": "AT GAS",
+        "plate_no": "HAA 7687",
+        "mileage": "61,879",
+        "color": "TITANIUM GREY",
+        "price": "344,000.00"
+    },
+    {
+        "id": 230,
+        "model": 2018,
+        "brand": "NISSAN - NV350",
+        "transmission": "MT DSL",
+        "plate_no": "HAA 7470",
+        "mileage": "286,252",
+        "color": "ALPINE WHITE",
+        "price": "774,000.00"
+    },
+    {
+        "id": 231,
+        "model": 2023,
+        "brand": "NISSAN - URVAN",
+        "transmission": "MT DSL",
+        "plate_no": "GBA 2027 / F6 E682",
+        "mileage": "57,416",
+        "color": "PEARL WHITE",
+        "price": "1,252,000.00"
+    },
+    {
+        "id": 232,
+        "model": 2016,
+        "brand": "TOYOTA - HI-ACE",
+        "transmission": "MT DSL",
+        "plate_no": "HCT 2219",
+        "mileage": "395,578",
+        "color": "WHITE",
+        "price": "468,000.00"
+    },
+    {
+        "id": 233,
+        "model": 2019,
+        "brand": "TOYOTA - HI-ACE",
+        "transmission": "MT DSL",
+        "plate_no": "HAB 5514",
+        "mileage": "203,103",
+        "color": "WHITE",
+        "price": "972,000.00"
+    },
+    {
+        "id": 234,
+        "model": 2023,
+        "brand": "TOYOTA - HI-ACE",
+        "transmission": "MT DSL",
+        "plate_no": "HAG 4182",
+        "mileage": "106,825",
+        "color": "WHITE",
+        "price": "984,000.00"
+    },
+    {
+        "id": 235,
+        "model": 2019,
+        "brand": "TOYOTA - HI-LUX 4X2",
+        "transmission": "MT DSL",
+        "plate_no": "HAB 3106",
+        "mileage": "151,183",
+        "color": "ATTITUDE BLACK MICA",
+        "price": "656,000.00"
+    },
+    {
+        "id": 236,
+        "model": 2021,
+        "brand": "TOYOTA - VIOS",
+        "transmission": "AT GAS",
+        "plate_no": "EAE 1977",
+        "mileage": "58,623",
+        "color": "BLACKISH RED MICA",
+        "price": "460,000.00"
+    },
+    {
+        "id": 238,
+        "model": 2022,
+        "brand": "CHERY - TIGGO 7",
+        "transmission": "AT GAS",
+        "plate_no": "FAN 7539",
+        "mileage": "16,409",
+        "color": "GRAY",
+        "price": "681,000.00"
+    },
+    {
+        "id": 239,
+        "model": 2020,
+        "brand": "FORD - RANGER",
+        "transmission": "MT DSL",
+        "plate_no": "FAJ 9143",
+        "mileage": "77,156",
+        "color": "TRUE RED",
+        "price": "688,000.00"
+    },
+    {
+        "id": 240,
+        "model": 2019,
+        "brand": "FORD - RANGER",
+        "transmission": "AT DSL",
+        "plate_no": "FAM 9351",
+        "mileage": "9,364",
+        "color": "BLUE REFLEX",
+        "price": "864,000.00"
+    },
+    {
+        "id": 241,
+        "model": 2019,
+        "brand": "HONDA - CIVIC",
+        "transmission": "AT GAS",
+        "plate_no": "NDL 1198",
+        "mileage": "116,585",
+        "color": "PLATINUM WHITE PEARL",
+        "price": "797,000.00"
+    },
+    {
+        "id": 242,
+        "model": 2017,
+        "brand": "HYUNDAI - ACCENT",
+        "transmission": "MT GAS",
+        "plate_no": "FAB 1400 / 060103",
+        "mileage": "29,102",
+        "color": "BLUE",
+        "price": "284,000.00"
+    },
+    {
+        "id": 243,
+        "model": 2019,
+        "brand": "HYUNDAI - ACCENT",
+        "transmission": "AT GAS",
+        "plate_no": "GAJ 1079",
+        "mileage": "19,104",
+        "color": "VELVET DUNE",
+        "price": "411,000.00"
+    },
+    {
+        "id": 244,
+        "model": 2017,
+        "brand": "HYUNDAI - EON",
+        "transmission": "MT GAS",
+        "plate_no": "MT 0082",
+        "mileage": "99,601",
+        "color": "BLUE",
+        "price": "186,000.00"
+    },
+    {
+        "id": 245,
+        "model": 2023,
+        "brand": "ISUZU - D-MAX",
+        "transmission": "AT DSL",
+        "plate_no": "D3 I226 / FAO 9924",
+        "mileage": "16,257",
+        "color": "RED SPINE MICA",
+        "price": "1,211,000.00"
+    },
+    {
+        "id": 246,
+        "model": 2021,
+        "brand": "KIA - STONIC 1.4LX AT",
+        "transmission": "AT GAS",
+        "plate_no": "FAI 3617",
+        "mileage": "40,357",
+        "color": "WHITE",
+        "price": "529,000.00"
+    },
+    {
+        "id": 247,
+        "model": 2018,
+        "brand": "MITSUBISHI - MIRAGE",
+        "transmission": "MT GAS",
+        "plate_no": "NBF 5722",
+        "mileage": "3,533",
+        "color": "PYRENSE BLACK",
+        "price": "340,000.00"
+    },
+    {
+        "id": 248,
+        "model": 2021,
+        "brand": "MORRIS GARAGES - ZS STYLE",
+        "transmission": "AT GAS",
+        "plate_no": "FAF 7455",
+        "mileage": "28,622",
+        "color": "ORANGE",
+        "price": "514,000.00"
+    },
+    {
+        "id": 249,
+        "model": 2020,
+        "brand": "NISSAN - ALMERA",
+        "transmission": "MT GAS",
+        "plate_no": "FAL 6262",
+        "mileage": "68,899",
+        "color": "BRILLIANT SILVER",
+        "price": "382,000.00"
+    },
+    {
+        "id": 250,
+        "model": 2022,
+        "brand": "SUZUKI - DZIRE",
+        "transmission": "AT GAS",
+        "plate_no": "FAI 9883",
+        "mileage": "21,067",
+        "color": "RED",
+        "price": "436,000.00"
+    },
+    {
+        "id": 251,
+        "model": 2022,
+        "brand": "SUZUKI - S-PRESSO",
+        "transmission": "MT GAS",
+        "plate_no": "FAJ 6538",
+        "mileage": "35,622",
+        "color": "RED",
+        "price": "335,000.00"
+    },
+    {
+        "id": 252,
+        "model": 2021,
+        "brand": "SUZUKI - S-PRESSO",
+        "transmission": "MT GAS",
+        "plate_no": "FAJ 9309",
+        "mileage": "9,224",
+        "color": "ORANGE",
+        "price": "373,000.00"
+    },
+    {
+        "id": 253,
+        "model": 2020,
+        "brand": "SUZUKI - S-PRESSO 1.0 MT",
+        "transmission": "MT GAS",
+        "plate_no": "FAL 5284",
+        "mileage": "81,124",
+        "color": "SILVER",
+        "price": "343,000.00"
+    },
+    {
+        "id": 255,
+        "model": 2018,
+        "brand": "CHEVROLET - SPARK",
+        "transmission": "AT GAS",
+        "plate_no": "KAB 7370",
+        "mileage": "87,170",
+        "color": "MINT",
+        "price": "313,000.00"
+    },
+    {
+        "id": 256,
+        "model": 2023,
+        "brand": "CHEVROLET - TRACKER SUV",
+        "transmission": "AT GAS",
+        "plate_no": "ZAF 1812",
+        "mileage": "8,459",
+        "color": "BLACK METALLIC",
+        "price": "1,008,000.00"
+    },
+    {
+        "id": 257,
+        "model": 2017,
+        "brand": "CHEVROLET - TRAILBLAZER",
+        "transmission": "AT DSL",
+        "plate_no": "KAA 5733",
+        "mileage": "205,119",
+        "color": "BLUE",
+        "price": "591,000.00"
+    },
+    {
+        "id": 258,
+        "model": 2018,
+        "brand": "CHEVROLET - TRAX 1.4L LS",
+        "transmission": "AT GAS",
+        "plate_no": "ZAC 5434",
+        "mileage": "60,325",
+        "color": "SUMMIT WHITE",
+        "price": "384,000.00"
+    },
+    {
+        "id": 259,
+        "model": 2016,
+        "brand": "FORD - RANGER",
+        "transmission": "AT DSL",
+        "plate_no": "ACU 5950 / KCU\r5950",
+        "mileage": "185,527",
+        "color": "BLACK MICA",
+        "price": "593,000.00"
+    },
+    {
+        "id": 260,
+        "model": 2020,
+        "brand": "FORD - RANGER",
+        "transmission": "AT DSL",
+        "plate_no": "ZAB 6426",
+        "mileage": "146,151",
+        "color": "ABSOLUTE BLACK",
+        "price": "1,020,000.00"
+    },
+    {
+        "id": 261,
+        "model": 2018,
+        "brand": "HONDA - BRV",
+        "transmission": "AT GAS",
+        "plate_no": "NBC 8684",
+        "mileage": "38,645",
+        "color": "CRYSTAL BLACK",
+        "price": "670,000.00"
+    },
+    {
+        "id": 262,
+        "model": 2020,
+        "brand": "HYUNDAI - REINA",
+        "transmission": "MT GAS",
+        "plate_no": "KAF 9109",
+        "mileage": "40,437",
+        "color": "WHITE",
+        "price": "418,000.00"
+    },
+    {
+        "id": 263,
+        "model": 2021,
+        "brand": "HYUNDAI - REINA",
+        "transmission": "AT GAS",
+        "plate_no": "KAG 6216",
+        "mileage": "85,369",
+        "color": "WHITE",
+        "price": "445,000.00"
+    },
+    {
+        "id": 265,
+        "model": 2023,
+        "brand": "KIA - 2500",
+        "transmission": "MT DSL",
+        "plate_no": "NFB 7759",
+        "mileage": "20,815",
+        "color": "WHITE",
+        "price": "983,000.00"
+    },
+    {
+        "id": 266,
+        "model": 2018,
+        "brand": "KIA - PICANTO",
+        "transmission": "MT GAS",
+        "plate_no": "KAB 3576",
+        "mileage": "58,862",
+        "color": "ORANGE",
+        "price": "239,000.00"
+    },
+    {
+        "id": 267,
+        "model": 2022,
+        "brand": "KIA - SOLUTO",
+        "transmission": "MT GAS",
+        "plate_no": "ZAC 7830",
+        "mileage": "16,628",
+        "color": "BLACK",
+        "price": "461,000.00"
+    },
+    {
+        "id": 268,
+        "model": 2019,
+        "brand": "KIA - SOLUTO",
+        "transmission": "AT GAS",
+        "plate_no": "ZAC 5332",
+        "mileage": "50,131",
+        "color": "SILVER",
+        "price": "344,000.00"
+    },
+    {
+        "id": 269,
+        "model": 2020,
+        "brand": "KIA - SOLUTO",
+        "transmission": "AT GAS",
+        "plate_no": "KAF 8101",
+        "mileage": "33,741",
+        "color": "RED",
+        "price": "391,000.00"
+    },
+    {
+        "id": 270,
+        "model": 2023,
+        "brand": "KIA - SOLUTO",
+        "transmission": "AT GAS",
+        "plate_no": "ZAC 8392",
+        "mileage": "26,377",
+        "color": "BEIGE",
+        "price": "606,000.00"
+    },
+    {
+        "id": 271,
+        "model": 2023,
+        "brand": "KIA - STONIC 1.4LX AT",
+        "transmission": "AT GAS",
+        "plate_no": "ZAF 2358",
+        "mileage": "9,891",
+        "color": "YELLOW/BLACK",
+        "price": "804,000.00"
+    },
+    {
+        "id": 272,
+        "model": 2016,
+        "brand": "MAZDA - BT-50",
+        "transmission": "AT DSL",
+        "plate_no": "KDO 8596 / ADO\r8596",
+        "mileage": "223,964",
+        "color": "HIGHLIGHT SILVER",
+        "price": "468,000.00"
+    },
+    {
+        "id": 273,
+        "model": 2022,
+        "brand": "MITSUBISHI - L300 FB",
+        "transmission": "MT DSL",
+        "plate_no": "LAL 3659",
+        "mileage": "5,657",
+        "color": "POLAR WHITE",
+        "price": "712,000.00"
+    },
+    {
+        "id": 274,
+        "model": 2023,
+        "brand": "MITSUBISHI - MIRAGE",
+        "transmission": "AT GAS",
+        "plate_no": "KAR 6113",
+        "mileage": "88,181",
+        "color": "RED METALLIC",
+        "price": "422,000.00"
+    },
+    {
+        "id": 275,
+        "model": 2022,
+        "brand": "MITSUBISHI - MIRAGE",
+        "transmission": "AT GAS",
+        "plate_no": "KAP 2061",
+        "mileage": "19,438",
+        "color": "TITANIUM GREY METALLIC",
+        "price": "434,000.00"
+    },
+    {
+        "id": 276,
+        "model": 2022,
+        "brand": "MITSUBISHI - MIRAGE",
+        "transmission": "MT GAS",
+        "plate_no": "KAF 2884",
+        "mileage": "24,109",
+        "color": "TITANIUM GRAY METALLIC",
+        "price": "416,000.00"
+    },
+    {
+        "id": 277,
+        "model": 2022,
+        "brand": "MITSUBISHI - MONTERO SPORT",
+        "transmission": "MT DSL",
+        "plate_no": "KAF 4268",
+        "mileage": "20,384",
+        "color": "JET BLACK MICA",
+        "price": "984,000.00"
+    },
+    {
+        "id": 278,
+        "model": 2022,
+        "brand": "MITSUBISHI - MONTERO SPORT",
+        "transmission": "MT DSL",
+        "plate_no": "KAF 3649",
+        "mileage": "80,001",
+        "color": "WHITE DIAMOND",
+        "price": "954,000.00"
+    },
+    {
+        "id": 279,
+        "model": 2021,
+        "brand": "MITSUBISHI - STRADA",
+        "transmission": "AT DSL",
+        "plate_no": "KAF 5177",
+        "mileage": "30,003",
+        "color": "STERLING SILVER\rMETALLIC",
+        "price": "968,000.00"
+    },
+    {
+        "id": 280,
+        "model": 2020,
+        "brand": "MITSUBISHI - STRADA",
+        "transmission": "MT DSL",
+        "plate_no": "B6 W893",
+        "mileage": "110,179",
+        "color": "WHITE DIAMOND",
+        "price": "721,000.00"
+    },
+    {
+        "id": 281,
+        "model": 2021,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "MT GAS",
+        "plate_no": "LAH 9250",
+        "mileage": "60,057",
+        "color": "COOL SILVER",
+        "price": "370,000.00"
+    },
+    {
+        "id": 282,
+        "model": 2022,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "MT GAS",
+        "plate_no": "KAF 6746",
+        "mileage": "19,092",
+        "color": "TITANIUM GRAY METALLIC",
+        "price": "429,000.00"
+    },
+    {
+        "id": 283,
+        "model": 2023,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "AT GAS",
+        "plate_no": "ZAC 8640 / Y2X331",
+        "mileage": "25,502",
+        "color": "RED METALLIC",
+        "price": "477,000.00"
+    },
+    {
+        "id": 284,
+        "model": 2019,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "MT GAS",
+        "plate_no": "ZAB 7657",
+        "mileage": "113,842",
+        "color": "SAVANNA WHITE",
+        "price": "274,000.00"
+    },
+    {
+        "id": 285,
+        "model": 2020,
+        "brand": "MORRIS GARAGES - ZS ALPHA",
+        "transmission": "AT GAS",
+        "plate_no": "NGD 4780",
+        "mileage": "34,887",
+        "color": "METEORITE BLACK",
+        "price": "565,000.00"
+    },
+    {
+        "id": 286,
+        "model": 2020,
+        "brand": "NISSAN -  NAVARA",
+        "transmission": "MT DSL",
+        "plate_no": "GAU 7659",
+        "mileage": "56,699",
+        "color": "ASPEN WHITE",
+        "price": "714,000.00"
+    },
+    {
+        "id": 287,
+        "model": 2020,
+        "brand": "NISSAN -  NAVARA",
+        "transmission": "AT DSL",
+        "plate_no": "KAD 7773",
+        "mileage": "82,418",
+        "color": "GALAXY BLACK",
+        "price": "817,000.00"
+    },
+    {
+        "id": 288,
+        "model": 2018,
+        "brand": "NISSAN - ALMERA",
+        "transmission": "MT GAS",
+        "plate_no": "KAB 1323",
+        "mileage": "62,421",
+        "color": "TITANIUM GREY",
+        "price": "309,000.00"
+    },
+    {
+        "id": 289,
+        "model": 2019,
+        "brand": "NISSAN - ALMERA",
+        "transmission": "MT GAS",
+        "plate_no": "KAD 2243",
+        "mileage": "74,159",
+        "color": "BLUISH BLACK",
+        "price": "313,000.00"
+    },
+    {
+        "id": 290,
+        "model": 2023,
+        "brand": "NISSAN - LIVINA 1.5 VL MPV",
+        "transmission": "AT GAS",
+        "plate_no": "JAN 3277",
+        "mileage": "45,234",
+        "color": "DIAMOND PEARL WHITE",
+        "price": "841,000.00"
+    },
+    {
+        "id": 291,
+        "model": 2020,
+        "brand": "NISSAN - NAVARA",
+        "transmission": "AT DSL",
+        "plate_no": "LAI 1666",
+        "mileage": "147,493",
+        "color": "GALAXY BLACK",
+        "price": "943,000.00"
+    },
+    {
+        "id": 292,
+        "model": 2020,
+        "brand": "NISSAN - NV350",
+        "transmission": "MT DSL",
+        "plate_no": "KAD 5755",
+        "mileage": "265,267",
+        "color": "BRILLIANT SILVER",
+        "price": "753,000.00"
+    },
+    {
+        "id": 293,
+        "model": 2022,
+        "brand": "SSANGYONG - MUSSO SUV PICKUP",
+        "transmission": "AT DSL",
+        "plate_no": "ZAC 7138",
+        "mileage": "34,168",
+        "color": "RED",
+        "price": "1,083,000.00"
+    },
+    {
+        "id": 294,
+        "model": 2021,
+        "brand": "SUZUKI - CARRY CAB AND CHA UTI",
+        "transmission": "MT GAS",
+        "plate_no": "KAG 5360",
+        "mileage": "55,489",
+        "color": "WHITE",
+        "price": "411,000.00"
+    },
+    {
+        "id": 295,
+        "model": 2024,
+        "brand": "SUZUKI - DZIRE",
+        "transmission": "AT GAS",
+        "plate_no": "LAN 3065",
+        "mileage": "24,289",
+        "color": "BLUE",
+        "price": "525,000.00"
+    },
+    {
+        "id": 296,
+        "model": 2023,
+        "brand": "SUZUKI - ERTIGA",
+        "transmission": "AT HYBRID",
+        "plate_no": "ZAF 1674 / G4 K223",
+        "mileage": "12,704",
+        "color": "KHAKI",
+        "price": "800,000.00"
+    },
+    {
+        "id": 297,
+        "model": 2018,
+        "brand": "SUZUKI - SWIFT",
+        "transmission": "MT GAS",
+        "plate_no": "KAB 8349",
+        "mileage": "21,705",
+        "color": "WHITE",
+        "price": "364,000.00"
+    },
+    {
+        "id": 298,
+        "model": 2022,
+        "brand": "SUZUKI - XL7",
+        "transmission": "AT GAS",
+        "plate_no": "ZAC 3181",
+        "mileage": "41,134",
+        "color": "WHITE",
+        "price": "807,000.00"
+    },
+    {
+        "id": 299,
+        "model": 2015,
+        "brand": "TOYOTA - HI-LUX 4X2",
+        "transmission": "MT DSL",
+        "plate_no": "AFA 5600",
+        "mileage": "248,251",
+        "color": "DARK STEEL MICA",
+        "price": "563,000.00"
+    },
+    {
+        "id": 300,
+        "model": 2021,
+        "brand": "TOYOTA - HI-LUX 4X2",
+        "transmission": "AT DSL",
+        "plate_no": "GAT 6001",
+        "mileage": "34,264",
+        "color": "NEBULA BLUE METALLIC",
+        "price": "1,095,000.00"
+    },
+    {
+        "id": 301,
+        "model": 2023,
+        "brand": "TOYOTA - RAIZE 1.0 TURBO SUV",
+        "transmission": "AT GAS",
+        "plate_no": "KAI 3442 / S9 F618",
+        "mileage": "19,413",
+        "color": "WHITE PEARL SE",
+        "price": "830,000.00"
+    },
+    {
+        "id": 302,
+        "model": 2021,
+        "brand": "TOYOTA - RUSH 1.5 G A/T",
+        "transmission": "AT GAS",
+        "plate_no": "KAG 7258",
+        "mileage": "66,330",
+        "color": "BRONZE MICA METALLIC",
+        "price": "784,000.00"
+    },
+    {
+        "id": 303,
+        "model": 2022,
+        "brand": "TOYOTA - RUSH 1.5 G A/T",
+        "transmission": "AT GAS",
+        "plate_no": "KAF 2275",
+        "mileage": "68,967",
+        "color": "BORDEAUX MICA",
+        "price": "706,000.00"
+    },
+    {
+        "id": 304,
+        "model": 2019,
+        "brand": "TOYOTA - WIGO",
+        "transmission": "AT GAS",
+        "plate_no": "ZAB 8500",
+        "mileage": "122,637",
+        "color": "WHITE",
+        "price": "347,000.00"
+    },
+    {
+        "id": 305,
+        "model": 2020,
+        "brand": "TOYOTA - WIGO",
+        "transmission": "MT GAS",
+        "plate_no": "KAF 9374",
+        "mileage": "63,856",
+        "color": "WHITE",
+        "price": "364,000.00"
+    },
+    {
+        "id": 306,
+        "model": 2020,
+        "brand": "TOYOTA - WIGO",
+        "transmission": "AT GAS",
+        "plate_no": "ZAB 7446",
+        "mileage": "79,334",
+        "color": "BLACK",
+        "price": "351,000.00"
+    },
+    {
+        "id": 308,
+        "model": 2020,
+        "brand": "FORD - ECOSPORT",
+        "transmission": "MT GAS",
+        "plate_no": "MAK 1996",
+        "mileage": "64,496",
+        "color": "ABSOLUTE BLACK",
+        "price": "458,000.00"
+    },
+    {
+        "id": 309,
+        "model": 2022,
+        "brand": "FORD - TERRITORY",
+        "transmission": "AT GAS",
+        "plate_no": "LAJ 4637",
+        "mileage": "88,646",
+        "color": "PANTHER BLACK",
+        "price": "902,000.00"
+    },
+    {
+        "id": 310,
+        "model": 2023,
+        "brand": "MITSUBISHI MIRAGE G4 GLX",
+        "transmission": "AT GAS",
+        "plate_no": "MAQ 6080",
+        "mileage": "13,450",
+        "color": "COOL SILVER METALLIC",
+        "price": "555,000.00"
+    },
+    {
+        "id": 311,
+        "model": 2022,
+        "brand": "MORRIS GARAGES - ZS ALPHA",
+        "transmission": "AT GAS",
+        "plate_no": "MAS 6773",
+        "mileage": "14,152",
+        "color": "WHITE",
+        "price": "694,000.00"
+    },
+    {
+        "id": 312,
+        "model": 2019,
+        "brand": "MORRIS GARAGES - ZS STYLE",
+        "transmission": "AT GAS",
+        "plate_no": "MAK 8001",
+        "mileage": "98,644",
+        "color": "RED",
+        "price": "465,000.00"
+    },
+    {
+        "id": 313,
+        "model": 2019,
+        "brand": "NISSAN - ALMERA",
+        "transmission": "AT GAS",
+        "plate_no": "LAF 2239",
+        "mileage": "50,703",
+        "color": "BRILLIANT SILVER",
+        "price": "394,000.00"
+    },
+    {
+        "id": 314,
+        "model": 2019,
+        "brand": "NISSAN - NAVARA",
+        "transmission": "AT DSL",
+        "plate_no": "GAJ 6667",
+        "mileage": "114,845",
+        "color": "GALAXY BLACK",
+        "price": "568,000.00"
+    },
+    {
+        "id": 315,
+        "model": 2020,
+        "brand": "NISSAN - NV350",
+        "transmission": "MT DSL",
+        "plate_no": "LAH 4153",
+        "mileage": "84,560",
+        "color": "ALPINE WHITE",
+        "price": "705,000.00"
+    },
+    {
+        "id": 316,
+        "model": 2019,
+        "brand": "NISSAN - TERRA 2.5L VE 4X2 A/T",
+        "transmission": "AT DSL",
+        "plate_no": "LAF 5243",
+        "mileage": "54,853",
+        "color": "FIERY RED",
+        "price": "1,020,000.00"
+    },
+    {
+        "id": 318,
+        "model": 2021,
+        "brand": "CHEVROLET - COLORADO",
+        "transmission": "AT DSL",
+        "plate_no": "MAT 9587",
+        "mileage": "74,558",
+        "color": "PULL ME OVER RED",
+        "price": "869,000.00"
+    },
+    {
+        "id": 319,
+        "model": 2018,
+        "brand": "CHEVROLET - SAIL",
+        "transmission": "MT GAS",
+        "plate_no": "MAO 7053",
+        "mileage": "142,607",
+        "color": "SILVER METALLIC",
+        "price": "214,000.00"
+    },
+    {
+        "id": 320,
+        "model": 2020,
+        "brand": "FORD - RANGER",
+        "transmission": "AT DSL",
+        "plate_no": "NGB 1178",
+        "mileage": "102,251",
+        "color": "ALUMINUM METALLIC",
+        "price": "923,000.00"
+    },
+    {
+        "id": 321,
+        "model": 2022,
+        "brand": "FORD - RANGER",
+        "transmission": "AT DSL",
+        "plate_no": "LAH 9482",
+        "mileage": "51,857",
+        "color": "TRUE RED",
+        "price": "1,324,000.00"
+    },
+    {
+        "id": 322,
+        "model": 2021,
+        "brand": "GEELY - COOLRAY",
+        "transmission": "AT GAS",
+        "plate_no": "MAU 3441",
+        "mileage": "62,669",
+        "color": "RED",
+        "price": "790,000.00"
+    },
+    {
+        "id": 323,
+        "model": 2022,
+        "brand": "GEELY - COOLRAY",
+        "transmission": "AT GAS",
+        "plate_no": "LAJ 8079",
+        "mileage": "21,752",
+        "color": "RED",
+        "price": "837,000.00"
+    },
+    {
+        "id": 324,
+        "model": 2021,
+        "brand": "GEELY - OKAVANGO",
+        "transmission": "AT GAS",
+        "plate_no": "FAI 6963",
+        "mileage": "76,173",
+        "color": "GRAY",
+        "price": "957,000.00"
+    },
+    {
+        "id": 325,
+        "model": 2018,
+        "brand": "HONDA - CITY",
+        "transmission": "AT GAS",
+        "plate_no": "GAH 9159",
+        "mileage": "50,201",
+        "color": "MODERN STEEL",
+        "price": "421,000.00"
+    },
+    {
+        "id": 326,
+        "model": 2020,
+        "brand": "HYUNDAI - ACCENT",
+        "transmission": "MT GAS",
+        "plate_no": "LAI 6585",
+        "mileage": "77,272",
+        "color": "SLEEK SILVER",
+        "price": "369,000.00"
+    },
+    {
+        "id": 327,
+        "model": 2020,
+        "brand": "HYUNDAI - ACCENT",
+        "transmission": "AT GAS",
+        "plate_no": "LAI 9617",
+        "mileage": "89,412",
+        "color": "PHANTOM BLACK",
+        "price": "350,000.00"
+    },
+    {
+        "id": 328,
+        "model": 2021,
+        "brand": "HYUNDAI - ACCENT",
+        "transmission": "AT GAS",
+        "plate_no": "LAJ 1936",
+        "mileage": "37,595",
+        "color": "SILVER",
+        "price": "518,000.00"
+    },
+    {
+        "id": 329,
+        "model": 2020,
+        "brand": "HYUNDAI - REINA",
+        "transmission": "MT GAS",
+        "plate_no": "LAI 9063",
+        "mileage": "45,744",
+        "color": "SILVER",
+        "price": "340,000.00"
+    },
+    {
+        "id": 330,
+        "model": 2020,
+        "brand": "HYUNDAI - SANTA FE",
+        "transmission": "AT DSL",
+        "plate_no": "LAI 7427",
+        "mileage": "71,681",
+        "color": "BRONZE",
+        "price": "1,182,000.00"
+    },
+    {
+        "id": 331,
+        "model": 2020,
+        "brand": "ISUZU - D-MAX",
+        "transmission": "AT DSL",
+        "plate_no": "GAO 1015",
+        "mileage": "103,831",
+        "color": "TITANIUM SILVER",
+        "price": "894,000.00"
+    },
+    {
+        "id": 332,
+        "model": 2019,
+        "brand": "ISUZU - D-MAX",
+        "transmission": "AT DSL",
+        "plate_no": "MAI 6391",
+        "mileage": "133,239",
+        "color": "COSMIC BLACK MICA",
+        "price": "696,000.00"
+    },
+    {
+        "id": 333,
+        "model": 2019,
+        "brand": "ISUZU - MU-X",
+        "transmission": "AT DSL",
+        "plate_no": "NBH 7546",
+        "mileage": "63,046",
+        "color": "BLACK MICA",
+        "price": "846,000.00"
+    },
+    {
+        "id": 334,
+        "model": 2015,
+        "brand": "ISUZU - MU-X 4X2 AT (LS-A)",
+        "transmission": "AT DSL",
+        "plate_no": "AAG 4270",
+        "mileage": "150,290",
+        "color": "SPLASH WHITE",
+        "price": "732,000.00"
+    },
+    {
+        "id": 335,
+        "model": 2021,
+        "brand": "KIA - K2500 KARGA BODY 4X2 UTI",
+        "transmission": "MT DSL",
+        "plate_no": "MAU 9446",
+        "mileage": "80,870",
+        "color": "WHITE",
+        "price": "588,000.00"
+    },
+    {
+        "id": 336,
+        "model": 2023,
+        "brand": "KIA - SOLUTO",
+        "transmission": "AT GAS",
+        "plate_no": "NFB 9634 / X0 X600",
+        "mileage": "13,344",
+        "color": "BLACK PEARL",
+        "price": "609,000.00"
+    },
+    {
+        "id": 337,
+        "model": 2017,
+        "brand": "MAHINDRA - XYLO AUV",
+        "transmission": "MT DSL",
+        "plate_no": "ZAA 4016 / 150107",
+        "mileage": "71,040",
+        "color": "SATIN SILVER",
+        "price": "236,000.00"
+    },
+    {
+        "id": 338,
+        "model": 2022,
+        "brand": "MAXUS - T60",
+        "transmission": "AT DSL",
+        "plate_no": "LAK 2955",
+        "mileage": "38,934",
+        "color": "BLACK",
+        "price": "611,000.00"
+    },
+    {
+        "id": 339,
+        "model": 2021,
+        "brand": "MITSUBISHI - L300 FB",
+        "transmission": "MT DSL",
+        "plate_no": "LAG 9674",
+        "mileage": "14,629",
+        "color": "POLAR WHITE",
+        "price": "693,000.00"
+    },
+    {
+        "id": 340,
+        "model": 2022,
+        "brand": "MITSUBISHI - MIRAGE",
+        "transmission": "AT GAS",
+        "plate_no": "LAK 3201",
+        "mileage": "20,107",
+        "color": "TITANIUM GRAY METALLIC",
+        "price": "435,000.00"
+    },
+    {
+        "id": 341,
+        "model": 2020,
+        "brand": "MITSUBISHI - MONTERO SPORT",
+        "transmission": "MT DSL",
+        "plate_no": "ZAC 4578",
+        "mileage": "99,961",
+        "color": "STERLING SILVER\rMETALLIC",
+        "price": "953,000.00"
+    },
+    {
+        "id": 342,
+        "model": 2023,
+        "brand": "MITSUBISHI - MONTERO SPORT",
+        "transmission": "MT DSL",
+        "plate_no": "MAQ 5578",
+        "mileage": "26,092",
+        "color": "STERLING SILVER\rMETALLIC",
+        "price": "1,030,000.00"
+    },
+    {
+        "id": 343,
+        "model": 2023,
+        "brand": "MITSUBISHI - MONTERO SPORT",
+        "transmission": "MT DSL",
+        "plate_no": "LAM 1469",
+        "mileage": "8,067",
+        "color": "JET BLACK MICA",
+        "price": "1,072,000.00"
+    },
+    {
+        "id": 344,
+        "model": 2019,
+        "brand": "MITSUBISHI - XPANDER GLS SPORT",
+        "transmission": "AT GAS",
+        "plate_no": "LAD 4504",
+        "mileage": "81,058",
+        "color": "RED METALLIC",
+        "price": "723,000.00"
+    },
+    {
+        "id": 345,
+        "model": 2019,
+        "brand": "MORRIS GARAGES - RX5",
+        "transmission": "AT GAS",
+        "plate_no": "LAI 8650",
+        "mileage": "49,849",
+        "color": "PEARL  BLACK",
+        "price": "521,000.00"
+    },
+    {
+        "id": 346,
+        "model": 2019,
+        "brand": "MORRIS GARAGES - RX5",
+        "transmission": "AT GAS",
+        "plate_no": "LAF 9256",
+        "mileage": "28,948",
+        "color": "PEARL BLACK",
+        "price": "565,000.00"
+    },
+    {
+        "id": 347,
+        "model": 2021,
+        "brand": "MORRIS GARAGES - ZS STYLE",
+        "transmission": "MT GAS",
+        "plate_no": "LAH 8955",
+        "mileage": "35,927",
+        "color": "ORANGE",
+        "price": "401,000.00"
+    },
+    {
+        "id": 348,
+        "model": 2021,
+        "brand": "MORRIS GARAGES - ZS STYLE",
+        "transmission": "MT GAS",
+        "plate_no": "MAU 3937",
+        "mileage": "58,651",
+        "color": "RED",
+        "price": "497,000.00"
+    },
+    {
+        "id": 349,
+        "model": 2019,
+        "brand": "MORRIS GARAGES - ZS STYLE",
+        "transmission": "AT GAS",
+        "plate_no": "LAG 2650",
+        "mileage": "124,048",
+        "color": "ORANGE",
+        "price": "468,000.00"
+    },
+    {
+        "id": 350,
+        "model": 2018,
+        "brand": "NISSAN -  NAVARA",
+        "transmission": "MT DSL",
+        "plate_no": "LAC 6734",
+        "mileage": "138,839",
+        "color": "GALAXY BLACK",
+        "price": "565,000.00"
+    },
+    {
+        "id": 351,
+        "model": 2020,
+        "brand": "NISSAN -  NAVARA",
+        "transmission": "MT DSL",
+        "plate_no": "LAI 8648",
+        "mileage": "89,922",
+        "color": "ALPINE WHITE",
+        "price": "659,000.00"
+    },
+    {
+        "id": 352,
+        "model": 2018,
+        "brand": "NISSAN -  NAVARA",
+        "transmission": "AT DSL",
+        "plate_no": "LAC 6976",
+        "mileage": "115,794",
+        "color": "GALAXY BLACK",
+        "price": "673,000.00"
+    },
+    {
+        "id": 353,
+        "model": 2020,
+        "brand": "NISSAN -  NAVARA",
+        "transmission": "AT DSL",
+        "plate_no": "LAH 4041",
+        "mileage": "16,578",
+        "color": "ASPEN WHITE",
+        "price": "851,000.00"
+    },
+    {
+        "id": 354,
+        "model": 2020,
+        "brand": "NISSAN -  NAVARA",
+        "transmission": "MT DSL",
+        "plate_no": "LAI 5528",
+        "mileage": "97,815",
+        "color": "BRILLIANT SILVER",
+        "price": "677,000.00"
+    },
+    {
+        "id": 355,
+        "model": 2023,
+        "brand": "NISSAN -  NAVARA",
+        "transmission": "AT DSL",
+        "plate_no": "F5 T814 / LAL 9190",
+        "mileage": "17,707",
+        "color": "FORGED METALLIC\rCOPPER",
+        "price": "1,030,000.00"
+    },
+    {
+        "id": 356,
+        "model": 2020,
+        "brand": "NISSAN - ALMERA",
+        "transmission": "MT GAS",
+        "plate_no": "LAI 9862",
+        "mileage": "69,346",
+        "color": "ALPINE WHITE",
+        "price": "311,000.00"
+    },
+    {
+        "id": 357,
+        "model": 2020,
+        "brand": "NISSAN - ALMERA",
+        "transmission": "MT GAS",
+        "plate_no": "LAG 4140",
+        "mileage": "126,202",
+        "color": "SAPPHIRE METALLIC BLUE",
+        "price": "332,000.00"
+    },
+    {
+        "id": 358,
+        "model": 2019,
+        "brand": "NISSAN - ALMERA",
+        "transmission": "MT GAS",
+        "plate_no": "LAG 2840",
+        "mileage": "23,717",
+        "color": "BRILLIANT SILVER",
+        "price": "378,000.00"
+    },
+    {
+        "id": 359,
+        "model": 2020,
+        "brand": "NISSAN - ALMERA",
+        "transmission": "AT GAS",
+        "plate_no": "F3 S554 / LAI 8184",
+        "mileage": "37,106",
+        "color": "METALLIC BROWN",
+        "price": "445,000.00"
+    },
+    {
+        "id": 360,
+        "model": 2018,
+        "brand": "NISSAN - NAVARA",
+        "transmission": "MT DSL",
+        "plate_no": "LAD 1400",
+        "mileage": "208,008",
+        "color": "BROWN",
+        "price": "606,000.00"
+    },
+    {
+        "id": 361,
+        "model": 2020,
+        "brand": "NISSAN - NAVARA",
+        "transmission": "MT DSL",
+        "plate_no": "LAG 7611",
+        "mileage": "100,285",
+        "color": "GALAXY BLACK",
+        "price": "663,000.00"
+    },
+    {
+        "id": 362,
+        "model": 2020,
+        "brand": "NISSAN - NAVARA",
+        "transmission": "AT DSL",
+        "plate_no": "LAI 8014",
+        "mileage": "76,948",
+        "color": "ALPINE WHITE",
+        "price": "901,000.00"
+    },
+    {
+        "id": 363,
+        "model": 2020,
+        "brand": "NISSAN - NAVARA",
+        "transmission": "AT DSL",
+        "plate_no": "LAI 2435",
+        "mileage": "132,260",
+        "color": "GALAXY BLACK",
+        "price": "972,000.00"
+    },
+    {
+        "id": 364,
+        "model": 2019,
+        "brand": "NISSAN - TERRA 2.5L EL 4X2 A/T",
+        "transmission": "AT DSL",
+        "plate_no": "LAD 5629",
+        "mileage": "83,363",
+        "color": "ASPEN PEARL WHITE",
+        "price": "824,000.00"
+    },
+    {
+        "id": 365,
+        "model": 2020,
+        "brand": "NISSAN - TERRA 2.5L EL 4X2 A/T",
+        "transmission": "AT DSL",
+        "plate_no": "LAH 6338",
+        "mileage": "38,172",
+        "color": "FIERY RED",
+        "price": "935,000.00"
+    },
+    {
+        "id": 366,
+        "model": 2020,
+        "brand": "NISSAN - TERRA 2.5L VE 4X2 A/T",
+        "transmission": "AT DSL",
+        "plate_no": "LAI 8252",
+        "mileage": "76,542",
+        "color": "BRILLIANT SILVER",
+        "price": "923,000.00"
+    },
+    {
+        "id": 367,
+        "model": 2020,
+        "brand": "NISSAN - TERRA 2.5L VE 4X2 A/T",
+        "transmission": "AT DSL",
+        "plate_no": "LAH 1487",
+        "mileage": "32,364",
+        "color": "LUNAR METALLIC GRAY",
+        "price": "1,151,000.00"
+    },
+    {
+        "id": 368,
+        "model": 2020,
+        "brand": "NISSAN - TERRA 2.5L VL 4X2 A/T",
+        "transmission": "AT DSL",
+        "plate_no": "LAI 6012",
+        "mileage": "68,097",
+        "color": "BRILLIANT SILVER",
+        "price": "1,079,000.00"
+    },
+    {
+        "id": 369,
+        "model": 2022,
+        "brand": "SUZUKI - DZIRE",
+        "transmission": "AT GAS",
+        "plate_no": "JAG 1244",
+        "mileage": "12,763",
+        "color": "RED",
+        "price": "459,000.00"
+    },
+    {
+        "id": 370,
+        "model": 2024,
+        "brand": "SUZUKI - DZIRE",
+        "transmission": "AT GAS",
+        "plate_no": "LAM 2152",
+        "mileage": "16,961",
+        "color": "BLUE",
+        "price": "543,000.00"
+    },
+    {
+        "id": 371,
+        "model": 2020,
+        "brand": "SUZUKI - ERTIGA",
+        "transmission": "AT GAS",
+        "plate_no": "LAH 4893",
+        "mileage": "58,449",
+        "color": "RED",
+        "price": "683,000.00"
+    },
+    {
+        "id": 372,
+        "model": 2022,
+        "brand": "TOYOTA - FORTUNER",
+        "transmission": "MT DSL",
+        "plate_no": "LAM 2905 / S8 S484",
+        "mileage": "10,574",
+        "color": "ATTITUDE BLACK MICA",
+        "price": "1,255,000.00"
+    },
+    {
+        "id": 374,
+        "model": 2015,
+        "brand": "TOYOTA - VIOS",
+        "transmission": "MT GAS",
+        "plate_no": "ABC 4342",
+        "mileage": "134,058",
+        "color": "GRAY METALLIC",
+        "price": "286,000.00"
+    },
+    {
+        "id": 375,
+        "model": 2016,
+        "brand": "TOYOTA - WIGO",
+        "transmission": "AT GAS",
+        "plate_no": "ACV 1044",
+        "mileage": "76,618",
+        "color": "GRAY METALLIC",
+        "price": "319,000.00"
+    }
+]
