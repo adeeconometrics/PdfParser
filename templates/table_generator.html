@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Model</th>
+        <th>Brand/Variant</th>
+        <th>Transmission Type</th>
+        <th>Plate No.</th>
+        <th>Mileage</th>
+        <th>Color</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable({
+        ajax: '/api/data',
+        serverSide: true,
+        columns: [
+          {data: 'id'},
+          {data: 'model'},
+          {data: 'brand'},
+          {data: 'transmission'},
+          {data: 'plate_no', orderable: false},
+            {data: 'mileage'},
+            {data: 'color'},
+            {data: 'price'},
+        ],
+      });
+    });
+  </script>
+{% endblock %}
