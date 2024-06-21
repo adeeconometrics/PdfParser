@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Car Selection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Car Selection</h1>
+      <hr>
+      
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Model</th>
+        <th>Brand/Variant</th>
+        <th>Transmission Type</th>
+        <th>Plate No.</th>
+        <th>Mileage</th>
+        <th>Color</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+    </div>
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.js"></script>
+    
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable({
+        ajax: '/api/data',
+        serverSide: true,
+        columns: [
+          {data: 'id', orderable: false},
+          {data: 'model'},
+          {data: 'brand', orderable: false},
+          {data: 'transmission', orderable: false},
+          {data: 'plate_no', orderable: false},
+            {data: 'mileage'},
+            {data: 'color'},
+            {data: 'price'},
+        ],
+      });
+    });
+  </script>
+
+  </body>
+</html>

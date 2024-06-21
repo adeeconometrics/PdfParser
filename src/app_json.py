@@ -1,4 +1,4 @@
-from typing import List,Dict, Optional
+from typing import List,Dict
 
 from pathlib import Path
 from argparse import ArgumentParser, ArgumentError
@@ -8,9 +8,11 @@ import json
 import logging
 
 from flask import Flask, render_template, request
+from flask_frozen import Freezer
 import tabula as tb
 
 app = Flask(__name__, template_folder='templates')
+freezer = Freezer(app)
 @dataclass
 class CarSalesModel:
     No:int
@@ -123,5 +125,7 @@ if __name__ == '__main__':
             print(f"Data saved to {args.json_path}")
 
         app.run(debug=True)
+        freezer.freeze()
+        
     except ArgumentError as e:
         logging.error(f"An error occurred while saving the data: {e}", exc_info=True)
