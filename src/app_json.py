@@ -8,11 +8,9 @@ import json
 import logging
 
 from flask import Flask, render_template, request
-from flask_frozen import Freezer
 import tabula as tb
 
 app = Flask(__name__, template_folder='templates')
-freezer = Freezer(app)
 @dataclass
 class CarSalesModel:
     No:int
@@ -110,7 +108,7 @@ def data() -> dict:
 if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument('--pdf_path', type=Path, default = None, help='Path to the PDF file')
-    parser.add_argument('-json_path', type=Path, help='Path to the JSON file')
+    parser.add_argument('--json_path', type=Path, default ='./datasource/carsaleslist.json',help='Path to the JSON file')
     args = parser.parse_args()
 
     try:
@@ -125,7 +123,6 @@ if __name__ == '__main__':
             print(f"Data saved to {args.json_path}")
 
         app.run(debug=True)
-        freezer.freeze()
-        
+
     except ArgumentError as e:
         logging.error(f"An error occurred while saving the data: {e}", exc_info=True)
