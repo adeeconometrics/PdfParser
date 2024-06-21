@@ -112,22 +112,10 @@ def data() -> dict:
     }
 
 if __name__ == '__main__':
-    parser = ArgumentParser()
-    parser.add_argument('--pdf_path', type=Path, default = None, help='Path to the PDF file')
-    parser.add_argument('--json_path', type=Path, default ='./datasource/carsaleslist.json',help='Path to the JSON file')
-    args = parser.parse_args()
-
     try:
-        if args.pdf_path is None:
-            with open(args.json_path) as f:
-                cars = json.load(f)
-        else:
-            data = pdf2json(args.pdf_path)
-            with open(args.json_path, 'w', encoding='utf-8') as f:
-                json.dump(data, f, indent=4)
-
-            print(f"Data saved to {args.json_path}")
-
+        json_path = Path('./datasource/carsaleslist.json')
+        with open(json_path, 'r', encoding='utf-8') as f:
+            cars = json.load(f)
         app.run(debug=True)
 
     except ArgumentError as e:
