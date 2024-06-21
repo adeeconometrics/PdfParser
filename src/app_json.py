@@ -7,9 +7,10 @@ from dataclasses import dataclass
 import json
 import logging
 
-
+from flask import Flask, render_template, request
 import tabula as tb
 
+app = Flask(__name__, template_folder='templates')
 @dataclass
 class CarSalesModel:
     No:int
@@ -48,17 +49,79 @@ def pdf2json(pdf_path:Path)-> List[Dict[str, str]]:
     return data
 
 
+@app.route('/')
+def index() -> str:
+    return render_template('table_generator.html', title="Car Selection", cars=cars)
+
+
+@app.route('/api/data')
+def data() -> dict:
+    search = request.args.get('search[value]')
+    if search:
+        search_lower = search.lower()
+        filtered_cars = [
+            car for car in cars if any(search_lower in str(value).lower() for value in car.values())
+        ]
+    else:
+        filtered_cars = cars
+
+    total_filtered = len(filtered_cars)
+
+    # Sorting
+    order = []
+    index = 0
+    while True:
+        col_index = request.args.get(f'order[{index}][column]')
+        if col_index is None:
+            break
+        col_name = request.args.get(f'columns[{col_index}][data]')
+        if col_name not in ('id', 'model', 'brand', 'transmission', 'plate_no', 'mileage', 'color', 'price'):
+            break
+
+        descending = request.args.get(f'order[{index}][dir]') == 'desc'
+        order.append((col_name, descending))
+        index += 1
+
+    for col_name, descending in order:
+        if col_name in ('transmission', 'model', 'color'):
+            filtered_cars.sort(
+                key=lambda car: str(car[col_name]), reverse=descending)
+        if col_name == 'mileage' or col_name == 'price':
+            filtered_cars.sort(
+                key=lambda car: float(car[col_name].replace(',','')), reverse=descending)
+        else:
+            filtered_cars.sort(key=lambda car: car[col_name], reverse=descending)
+
+    # Pagination
+    start = request.args.get('start', 0, type=int)
+    length = request.args.get('length', type=int)
+    paginated_cars = filtered_cars[start:start+length]
+
+    # Response
+    return {
+        'data': paginated_cars,
+        'recordsTotal': len(cars),
+        'recordsFiltered': total_filtered,
+        'draw': request.args.get('draw', 0, type=int)
+    }
+
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument('-pdf_path', type=Path, help='Path to the PDF file')
+    parser.add_argument('--pdf_path', type=Path, default = None, help='Path to the PDF file')
     parser.add_argument('-json_path', type=Path, help='Path to the JSON file')
     args = parser.parse_args()
-    data = pdf2json(args.pdf_path)
 
     try:
-        with open(args.json_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=4)
+        if args.pdf_path is None:
+            with open(args.json_path) as f:
+                cars = json.load(f)
+        else:
+            data = pdf2json(args.pdf_path)
+            with open(args.json_path, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=4)
 
-        print(f"Data saved to {args.json_path}")
+            print(f"Data saved to {args.json_path}")
+
+        app.run(debug=True)
     except ArgumentError as e:
         logging.error(f"An error occurred while saving the data: {e}", exc_info=True)
