@@ -1,9 +1,13 @@
+from typing import List, Optional
 from pathlib import Path
 from argparse import ArgumentParser, ArgumentError
 from dataclasses import dataclass, astuple
 
+import logging
+
 
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.exc import SQLAlchemyError
 from flask import Flask, render_template, request
 
 import tabula as tb
@@ -13,8 +17,21 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///carsales.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+logger = logging.getLogger(__name__)
+
+@dataclass
 class CarSalesFields(db.Model):
     __tablename__ = 'carsales'
+
+    def __init__(self, No, Model, BrandAndVariant, Transmission, PlateNo, Mileage, Color, SellingPrice) -> None:
+        self.No = No
+        self.Model = Model
+        self.BrandAndVariant = BrandAndVariant
+        self.Transmission = Transmission
+        self.PlateNo = PlateNo
+        self.Mileage = Mileage
+        self.Color = Color
+        self.SellingPrice = SellingPrice
 
     No = db.Column(db.Integer)
     Model = db.Column(db.Integer)
@@ -37,39 +54,52 @@ class CarSalesFields(db.Model):
             'price': self.SellingPrice
         }
 
-def create_db(db_path:Path) -> Path:
-    db.create_all()
-    return db_path
-
-def parse_pdf2db(pdf_path:Path) -> Path:
-    """parse the pdf table to SQLAlchemy database
+def read_pdf(pdf_path: Path) -> Optional[List]:
+    """Read the pdf and return tables
     """
     try:
-        tables = tb.read_pdf(pdf_path, pages='3-')
+        tables = tb.read_pdf(pdf_path, pages="all")
+        cleaned_tables = []
         for table in tables:
+            if len(table.columns) < 8:
+                continue
             table = table.dropna()
-            for row in table.itertuples():
-                if any(cell is None for cell in row):
-                    continue
-                fields = CarSalesFields(*row[1:])
-                db.session.add(fields)
-        db.session.commit()
+            cleaned_tables.append(table)
+        return cleaned_tables
     except Exception as e:
-        print(f"An error occurred: {e}")
+        logger.error(f"An error occurred while reading the PDF: {e}", exec_info=True)
+        return None
+
+
+def parse_pdf2db(tables: Optional[List]) -> Path:
+    """parse the pdf table to SQLAlchemy database
+    """
+    if tables is None:
+        return
+    try:
+        with db.session.begin():
+            for table in tables:
+                for row in table.itertuples():
+                    if any(cell is None for cell in row):
+                        continue
+                    fields = CarSalesFields(*row[1:])
+                    db.session.add(fields)
+            db.session.commit()
+    except SQLAlchemyError as e:
+        logger.error(f"An error occurred while updating the database: {e}", exec_info=True)
         db.session.rollback()
-    finally:
-        db.session.close()
-    return pdf_path
+
 
 @app.route('/')
 def index():
     cars = CarSalesFields.query
-    return render_template('table_generator.html', title = "Cars ni Baby", cars=cars)
+    return render_template('table_generator.html', title="Car Selection", cars=cars)
+
 
 @app.route('/api/data')
 def data():
     query = CarSalesFields.query
-    
+
     search = request.args.get('search[value]')
     if search:
         query = query.filter(
@@ -83,11 +113,11 @@ def data():
                 CarSalesFields.Color.like(f'%{search}%'),
                 CarSalesFields.SellingPrice.like(f'%{search}%')
             ))
-        
-    total_filtered:int = query.count()
+
+    total_filtered: int = query.count()
 
     order = []
-    index:int = 0
+    index: int = 0
 
     while True:
         col_index = request.args.get(f'order[{index}][column]')
@@ -120,6 +150,7 @@ def data():
         'draw': request.args.get('draw', 0, type=int)
     }
 
+
 if __name__ == '__main__':
     parser = ArgumentParser(description='Parse PDF to SQLite')
     parser.add_argument('-pdf_path', required=True,
@@ -129,11 +160,12 @@ if __name__ == '__main__':
 
     try:
         with app.app_context():
+            db.drop_all()
             db.create_all()
-            parse_pdf2db(args.pdf_path)
-        
+            tables = read_pdf(args.pdf_path)
+            parse_pdf2db(tables)
+
         app.run(debug=True)
 
     except ArgumentError as e:
         print(f'Error: {e}')
-        
