@@ -1,16 +1,17 @@
 from typing import List,Dict
 
 from pathlib import Path
-from argparse import ArgumentParser, ArgumentError
 from dataclasses import dataclass
 
 import json
-import logging
 
 from flask import Flask, render_template, request
 import tabula as tb
 
 app = Flask(__name__, template_folder='templates')
+json_path = Path('./datasource/carsaleslist.json')
+with open(json_path, 'r', encoding='utf-8') as f:
+    cars = json.load(f)
 @dataclass
 class CarSalesModel:
     No:int
@@ -111,12 +112,7 @@ def data() -> dict:
         'draw': request.args.get('draw', 0, type=int)
     }
 
-if __name__ == '__main__':
-    try:
-        json_path = Path('./datasource/carsaleslist.json')
-        with open(json_path, 'r', encoding='utf-8') as f:
-            cars = json.load(f)
-        app.run(debug=True)
 
-    except ArgumentError as e:
-        logging.error(f"An error occurred while saving the data: {e}", exc_info=True)
+
+if __name__ == '__main__':
+    app.run(debug=True)
