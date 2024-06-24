@@ -1,4 +1,4 @@
-from typing import List,Dict
+from typing import List,Dict, Optional
 
 from pathlib import Path
 from dataclasses import dataclass
@@ -15,13 +15,13 @@ with open(json_path, 'r', encoding='utf-8') as f:
 @dataclass
 class CarSalesModel:
     No:int
-    Model:int = None
-    BrandAndVariant:str = None
-    Transmission:str = None
-    PlateNo:str = None
-    Mileage:int = None
-    Color:str = None
-    SellingPrice:int = None
+    Model:Optional[int] = None
+    BrandAndVariant:Optional[str] = None
+    Transmission:Optional[str] = None
+    PlateNo:Optional[str] = None
+    Mileage:Optional[int] = None
+    Color:Optional[str] = None
+    SellingPrice:Optional[int] = None
 
     def to_dict(self) -> dict:
         return {
