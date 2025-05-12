@@ -179,36 +179,147 @@
         document.getElementById('clinic-map').appendChild(loadingDiv);
         
         // Build the search query using clinic information
-        let searchQuery = '';
+        // Create address components array to better handle and filter address parts
+        const addressComponents = [];
+        
         {% if clinic.address %}
-        searchQuery += '{{ clinic.address|replace("\'", "\\\'")|replace("\"", "\\\"") }}, ';
+        // Sanitize address: remove line breaks, normalize whitespace, and handle special characters
+        const sanitizedAddress = '{{ clinic.address|replace("\'", "\\\'")|replace("\"", "\\\"")|replace("\n", " ")|replace("\r", " ") }}'
+            .replace(/\s+/g, ' ')  // Normalize whitespace
+            .trim();
+        
+        if (sanitizedAddress) {
+            addressComponents.push(sanitizedAddress);
+        }
         {% endif %}
+        
         {% if clinic.city %}
-        searchQuery += '{{ clinic.city|replace("\'", "\\\'")|replace("\"", "\\\"") }}, ';
+        // Sanitize city
+        const sanitizedCity = '{{ clinic.city|replace("\'", "\\\'")|replace("\"", "\\\"") }}'
+            .replace(/\s+/g, ' ')
+            .trim();
+            
+        if (sanitizedCity) {
+            addressComponents.push(sanitizedCity);
+        }
         {% endif %}
+        
         {% if clinic.province %}
-        searchQuery += '{{ clinic.province|replace("\'", "\\\'")|replace("\"", "\\\"") }}, ';
+        // Sanitize province
+        const sanitizedProvince = '{{ clinic.province|replace("\'", "\\\'")|replace("\"", "\\\"") }}'
+            .replace(/\s+/g, ' ')
+            .trim();
+            
+        if (sanitizedProvince) {
+            addressComponents.push(sanitizedProvince);
+        }
         {% endif %}
+        
         {% if clinic.region %}
-        searchQuery += '{{ clinic.region|replace("\'", "\\\'")|replace("\"", "\\\"") }}, ';
+        // Sanitize region
+        const sanitizedRegion = '{{ clinic.region|replace("\'", "\\\'")|replace("\"", "\\\"") }}'
+            .replace(/\s+/g, ' ')
+            .trim();
+            
+        if (sanitizedRegion) {
+            addressComponents.push(sanitizedRegion);
+        }
         {% endif %}
-        searchQuery += 'Philippines';
-
-        // Use Google Maps API for geocoding
-        fetch(`https://maps.googleapis.com/maps/api/geocode/json?q=${encodeURIComponent(searchQuery)}&limit=1&key={{ google_maps_api_key }}`)
-            .then(response => response.json())
-            .then(data => {
-                // Remove loading indicator
+        
+        // Always add the country
+        addressComponents.push('Philippines');
+        
+        // Generate final search query by joining components
+        const searchQuery = addressComponents.join(', ');
+        
+        // Use Nominatim API for geocoding with proper query formatting
+        console.log('Geocoding query:', searchQuery);
+        
+        // Function for progressive address tokenization
+        function createAddressQueries(addressParts) {
+            const queries = [];
+            
+            // Start with the full address
+            if (addressParts.length > 0) {
+                queries.push(addressParts.join(', '));
+            }
+            
+            // Progressive fallbacks (remove street address, try just city/province/country, etc.)
+            if (addressParts.length > 3) { // If we have address + city + province/region + country
+                queries.push(addressParts.slice(1).join(', ')); // Skip the detailed street address
+            }
+            
+            if (addressParts.length > 2) { // If we have at least city + province + country
+                queries.push(addressParts.slice(-3).join(', ')); // Just city, province, country
+            }
+            
+            if (addressParts.length > 1) { // If we have at least province + country
+                queries.push(addressParts.slice(-2).join(', ')); // Just province, country
+            }
+            
+            // Always include just the country as final fallback
+            if (addressParts.length > 0) {
+                queries.push(addressParts[addressParts.length - 1]); // Just country
+            }
+            
+            return queries.filter((q, i, self) => self.indexOf(q) === i); // Remove duplicates
+        }
+        
+        // Create all possible address queries from most to least specific
+        const addressQueries = createAddressQueries(addressComponents);
+        let currentQueryIndex = 0;
+        
+        // Function to try next query if the current one fails
+        function tryNextQuery() {
+            if (currentQueryIndex >= addressQueries.length) {
+                // All queries failed, show error
                 if (loadingDiv.parentNode) {
                     loadingDiv.parentNode.removeChild(loadingDiv);
                 }
                 
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'alert alert-warning';
+                errorDiv.innerHTML = 'Location not found. Showing default map of Philippines.';
+                document.getElementById('clinic-map').appendChild(errorDiv);
+                
+                // Default to map of Philippines
+                map.setView([12.8797, 121.7740], 6);
+                return;
+            }
+            
+            const currentQuery = addressQueries[currentQueryIndex];
+            console.log(`Trying query ${currentQueryIndex + 1}/${addressQueries.length}: "${currentQuery}"`);
+            
+            // Proper URL construction
+            const geocodeUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(currentQuery)}&limit=1&countrycodes=ph`;
+            
+            fetch(geocodeUrl)
+            .then(response => response.json())
+            .then(data => {
                 if (data && data.length > 0) {
+                    // Remove loading indicator
+                    if (loadingDiv.parentNode) {
+                        loadingDiv.parentNode.removeChild(loadingDiv);
+                    }
+                    
                     const lat = parseFloat(data[0].lat);
                     const lon = parseFloat(data[0].lon);
                     
+                    console.log(`Location found for query "${currentQuery}": ${data[0].display_name}`);
+                    
+                    // Calculate zoom level based on result type
+                    let zoomLevel = 16; // Default zoom for precise location
+                    
+                    if (currentQueryIndex > 0) {
+                        // Adjust zoom level for less specific queries
+                        if (currentQueryIndex === 1) zoomLevel = 14; // City level
+                        else if (currentQueryIndex === 2) zoomLevel = 12; // Province level
+                        else if (currentQueryIndex === 3) zoomLevel = 8; // Region level
+                        else zoomLevel = 6; // Country level
+                    }
+                    
                     // Update map view
-                    map.setView([lat, lon], 16);
+                    map.setView([lat, lon], zoomLevel);
                     
                     // Add marker
                     const marker = L.marker([lat, lon]).addTo(map);
@@ -217,30 +328,33 @@
                     const popupContent = `
                         <strong>{{ clinic.clinic_name }}</strong><br>
                         {{ clinic.dentist_name }}<br>
-                        {{ clinic.address }}
+                        {{ clinic.address }}<br>
+                        <small class="text-muted">${data[0].display_name}</small>
                     `;
                     marker.bindPopup(popupContent).openPopup();
+                    
+                    // If we used a fallback query, show a notice
+                    if (currentQueryIndex > 0) {
+                        const noticeDiv = document.createElement('div');
+                        noticeDiv.className = 'alert alert-info';
+                        noticeDiv.innerHTML = 'Showing approximate location. Exact address not found.';
+                        document.getElementById('clinic-map').appendChild(noticeDiv);
+                    }
                 } else {
-                    // If no results were found, show an error message
-                    const errorDiv = document.createElement('div');
-                    errorDiv.className = 'alert alert-warning';
-                    errorDiv.innerHTML = 'Location not found. Showing default map.';
-                    document.getElementById('clinic-map').appendChild(errorDiv);
+                    console.log(`No results for query "${currentQuery}". Trying next query...`);
+                    currentQueryIndex++;
+                    tryNextQuery();
                 }
             })
             .catch(error => {
                 console.error('Error geocoding address:', error);
-                // Remove loading indicator
-                if (loadingDiv.parentNode) {
-                    loadingDiv.parentNode.removeChild(loadingDiv);
-                }
-                
-                // Add error message
-                const errorDiv = document.createElement('div');
-                errorDiv.className = 'alert alert-danger';
-                errorDiv.innerHTML = 'Error finding location. Please try again later.';
-                document.getElementById('clinic-map').appendChild(errorDiv);
+                currentQueryIndex++;
+                tryNextQuery();
             });
+        }
+        
+        // Start the geocoding attempt with the first query
+        tryNextQuery();
     });
 </script>
 {% endblock %}
