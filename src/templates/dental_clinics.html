@@ -1,0 +1,399 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .header {
+        background-color: #4a89dc;
+        color: white;
+        padding: 20px 0;
+        margin-bottom: 30px;
+    }
+    .card {
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        border: none;
+    }
+    .card-header {
+        background-color: #f1f5f9;
+        border-bottom: 1px solid #e9ecef;
+        padding: 15px 20px;
+        font-weight: 600;
+    }
+    .filter-section {
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .loader {
+        display: none;
+        text-align: center;
+        padding: 20px;
+    }
+    .dentist-name {
+        font-weight: 600;
+        color: #4a89dc;
+    }
+    .clinic-details {
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+    .contact-info {
+        margin-top: 5px;
+    }
+    .schedule-info {
+        font-size: 0.85rem;
+        color: #28a745;
+    }
+</style>
+
+<div class="header">
+    <div class="container">
+        <h1>Kaiser International Dental Clinics Directory</h1>
+        <p>Interactive directory of dental clinics from KaiserInternational PDF</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <div>
+                <i class="fas fa-tooth me-2"></i> Dental Clinics
+            </div>
+            <div>
+                <button id="init-db" class="btn btn-sm btn-outline-primary">Initialize Database</button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="filter-section">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="region-filter" class="form-label">Region</label>
+                        <select id="region-filter" class="form-select">
+                            <option value="">All Regions</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="province-filter" class="form-label">Province</label>
+                        <select id="province-filter" class="form-select" disabled>
+                            <option value="">All Provinces</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="city-filter" class="form-label">City/Town</label>
+                        <select id="city-filter" class="form-select" disabled>
+                            <option value="">All Cities/Towns</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <button id="clear-filters" class="btn btn-secondary">Clear Filters</button>
+                    <button id="apply-filters" class="btn btn-primary">Apply Filters</button>
+                </div>
+            </div>
+            
+            <div class="loader" id="loader">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p>Loading data...</p>
+            </div>
+            
+            <div class="table-responsive">
+                <table id="clinics-table" class="table table-striped table-hover" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Dentist Name</th>
+                            <th>Clinic Name</th>
+                            <th>Address</th>
+                            <th>City/Town</th>
+                            <th>Province</th>
+                            <th>Region</th>
+                            <th>Contact Number</th>
+                            <th>Schedule</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be loaded dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-light py-4 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">© 2025 Kaiser International Dental Clinics Directory</p>
+    </div>
+</footer>
+{% endblock %}
+
+{% block scripts %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap5.min.css">
+<script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap5.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Load regions for filtering
+        loadRegionData();
+        
+        // Initialize DataTable
+        const dataTable = $('#clinics-table').DataTable({
+            processing: true,
+            serverSide: true,
+            responsive: true,
+            ajax: {
+                url: '/api/data',
+                data: function(d) {
+                    d.region = $('#region-filter').val();
+                    d.province = $('#province-filter').val();
+                    d.city = $('#city-filter').val();
+                    return d;
+                },
+                beforeSend: function() {
+                    $('#loader').show();
+                },
+                complete: function() {
+                    $('#loader').hide();
+                }
+            },
+            columns: [
+                { data: 'entry_no', name: 'entry_no' },
+                { data: 'dentist_name', name: 'dentist_name' },
+                { data: 'clinic_name', name: 'clinic_name' },
+                { data: 'address', name: 'address' },
+                { data: 'city', name: 'city' },
+                { data: 'province', name: 'province' },
+                { data: 'region', name: 'region' },
+                { data: 'contact_number', name: 'contact_number' },
+                { data: 'schedule', name: 'schedule' }
+            ],
+            columnDefs: [
+                {
+                    targets: [0],
+                    className: 'text-center',
+                    width: '50px'
+                },
+                {
+                    targets: [1],
+                    render: function(data, type, row) {
+                        if (type === 'display') {
+                            return '<div class="dentist-name"><a href="/clinic/' + row.entry_no + '">' + (data || 'N/A') + '</a></div>';
+                        }
+                        return data;
+                    }
+                },
+                {
+                    targets: [2],
+                    render: function(data, type, row) {
+                        if (type === 'display' && data) {
+                            return '<a href="/clinic/' + row.entry_no + '">' + data + '</a>';
+                        }
+                        return data || 'N/A';
+                    }
+                },
+                {
+                    targets: [3, 4, 5, 6],
+                    render: function(data, type, row) {
+                        return data || 'N/A';
+                    }
+                },
+                {
+                    targets: [7],
+                    render: function(data, type, row) {
+                        if (!data) return 'N/A';
+                        const contacts = data.split('/');
+                        let html = '<div class="contact-info">';
+                        for (let i = 0; i < contacts.length; i++) {
+                            const contact = contacts[i].trim();
+                            if (contact) {
+                                html += '<div>' + contact + '</div>';
+                            }
+                        }
+                        html += '</div>';
+                        return html;
+                    }
+                },
+                {
+                    targets: [8],
+                    render: function(data, type, row) {
+                        return data ? 
+                            '<div class="schedule-info"><i class="far fa-clock me-1"></i>' + data + '</div>' : 
+                            'N/A';
+                    }
+                }
+            ],
+            order: [[0, 'asc']],
+            language: {
+                search: "Search:",
+                lengthMenu: "Show _MENU_ entries",
+                info: "Showing _START_ to _END_ of _TOTAL_ entries",
+                infoEmpty: "Showing 0 to 0 of 0 entries",
+                infoFiltered: "(filtered from _MAX_ total entries)",
+                zeroRecords: "No matching records found",
+                paginate: {
+                    first: "First",
+                    last: "Last",
+                    next: "Next",
+                    previous: "Previous"
+                }
+            }
+        });
+        
+        // Apply filters button
+        $('#apply-filters').click(function() {
+            dataTable.ajax.reload();
+        });
+        
+        // Clear filters button
+        $('#clear-filters').click(function() {
+            $('#region-filter').val('');
+            $('#province-filter').val('').prop('disabled', true);
+            $('#city-filter').val('').prop('disabled', true);
+            dataTable.ajax.reload();
+        });
+        
+        // Region change event
+        $('#region-filter').change(function() {
+            const regionName = $(this).val();
+            updateProvinceFilter(regionName);
+        });
+        
+        // Province change event
+        $('#province-filter').change(function() {
+            const regionName = $('#region-filter').val();
+            const provinceName = $(this).val();
+            updateCityFilter(regionName, provinceName);
+        });
+        
+        // Initialize database button
+        $('#init-db').click(function() {
+            $(this).prop('disabled', true).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Initializing...');
+            
+            $.get('/init_db')
+                .done(function(response) {
+                    alert('Database initialized successfully with ' + response.counts.clinics + ' clinics.');
+                })
+                .fail(function(error) {
+                    alert('Failed to initialize database: ' + error.responseText);
+                })
+                .always(function() {
+                    $('#init-db').prop('disabled', false).text('Initialize Database');
+                });
+        });
+        
+        // Helper function to load region data
+        function loadRegionData() {
+            $.get('/api/regions')
+                .done(function(regions) {
+                    // Store the region data globally
+                    window.regionData = regions;
+                    
+                    // Populate region dropdown
+                    const regionSelect = $('#region-filter');
+                    regionSelect.empty().append('<option value="">All Regions</option>');
+                    
+                    // Handle different region data formats
+                    if (Array.isArray(regions)) {
+                        // If regions is an array of objects with name property
+                        regions.forEach(function(region) {
+                            regionSelect.append('<option value="' + region.name + '">' + region.name + '</option>');
+                        });
+                    } else {
+                        // If regions is an object with region names as keys
+                        for (const regionName in regions) {
+                            regionSelect.append('<option value="' + regionName + '">' + regionName + '</option>');
+                        }
+                    }
+                })
+                .fail(function(error) {
+                    console.error('Failed to load regions:', error);
+                });
+        }
+        
+        // Update province dropdown based on selected region
+        function updateProvinceFilter(regionName) {
+            const provinceSelect = $('#province-filter');
+            const citySelect = $('#city-filter');
+            
+            provinceSelect.empty().append('<option value="">All Provinces</option>');
+            citySelect.empty().append('<option value="">All Cities/Towns</option>');
+            
+            if (!regionName) {
+                provinceSelect.prop('disabled', true);
+                citySelect.prop('disabled', true);
+                return;
+            }
+            
+            // Handle different region data formats
+            if (Array.isArray(window.regionData)) {
+                // If regionData is an array
+                const region = window.regionData.find(r => r.name === regionName);
+                if (!region || !region.provinces) return;
+                
+                // Populate provinces from array
+                region.provinces.forEach(function(province) {
+                    provinceSelect.append('<option value="' + province.name + '">' + province.name + '</option>');
+                });
+            } else {
+                // If regionData is an object
+                const region = window.regionData[regionName];
+                if (!region || !region.provinces) return;
+                
+                // Populate provinces from object
+                for (const provinceName in region.provinces) {
+                    provinceSelect.append('<option value="' + provinceName + '">' + provinceName + '</option>');
+                }
+            }
+            
+            provinceSelect.prop('disabled', false);
+            citySelect.prop('disabled', true);
+        }
+        
+        // Update city dropdown based on selected region and province
+        function updateCityFilter(regionName, provinceName) {
+            const citySelect = $('#city-filter');
+            citySelect.empty().append('<option value="">All Cities/Towns</option>');
+            
+            if (!regionName || !provinceName) {
+                citySelect.prop('disabled', true);
+                return;
+            }
+            
+            // Handle different region data formats
+            if (Array.isArray(window.regionData)) {
+                // If regionData is an array
+                const region = window.regionData.find(r => r.name === regionName);
+                if (!region) return;
+                
+                const province = region.provinces.find(p => p.name === provinceName);
+                if (!province || !province.cities) return;
+                
+                // Populate cities from array
+                province.cities.forEach(function(city) {
+                    citySelect.append('<option value="' + city + '">' + city + '</option>');
+                });
+            } else {
+                // If regionData is an object
+                const region = window.regionData[regionName];
+                if (!region) return;
+                
+                const province = region.provinces[provinceName];
+                if (!province || !province.cities) return;
+                
+                // Populate cities from array
+                province.cities.forEach(function(city) {
+                    citySelect.append('<option value="' + city + '">' + city + '</option>');
+                });
+            }
+            
+            citySelect.prop('disabled', false);
+        }
+    });
+</script>
+{% endblock %}

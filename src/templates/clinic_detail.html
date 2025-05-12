@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .clinic-header {
+        background-color: #4a89dc;
+        color: white;
+        padding: 20px 0;
+        margin-bottom: 30px;
+    }
+    .card {
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        border: none;
+    }
+    .card-header {
+        background-color: #f1f5f9;
+        border-bottom: 1px solid #e9ecef;
+        padding: 15px 20px;
+        font-weight: 600;
+    }
+    .clinic-info {
+        padding: 20px;
+    }
+    .clinic-map {
+        height: 300px;
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+    .dentist-name {
+        font-weight: 600;
+        color: #4a89dc;
+        font-size: 1.5rem;
+    }
+    .clinic-name {
+        font-weight: 500;
+        color: #343a40;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    .info-label {
+        font-weight: 600;
+        color: #6c757d;
+    }
+    .info-value {
+        margin-bottom: 10px;
+    }
+    .contact-info {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+    .back-btn {
+        margin-bottom: 20px;
+    }
+    .schedule-info {
+        background-color: #e8f5e9;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+</style>
+
+<div class="clinic-header">
+    <div class="container">
+        <h1>Dental Clinic Details</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="back-btn">
+        <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">
+            <i class="fas fa-arrow-left mr-2"></i> Back to Directory
+        </a>
+    </div>
+    
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <div>
+                <i class="fas fa-tooth me-2"></i> Clinic Information
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="clinic-info">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="dentist-name">{{ clinic.dentist_name }}</div>
+                        <div class="clinic-name">{{ clinic.clinic_name }}</div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <div class="info-label">Address:</div>
+                                <div class="info-value">{{ clinic.address }}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="info-label">City/Town:</div>
+                                <div class="info-value">{{ clinic.city }}</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-label">Province:</div>
+                                <div class="info-value">{{ clinic.province }}</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-label">Region:</div>
+                                <div class="info-value">{{ clinic.region }}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <div class="info-label">Contact Information:</div>
+                            <div class="row mt-2">
+                                <div class="col-md-12">
+                                    {% for contact in clinic.contact_numbers %}
+                                    <div><i class="fas fa-phone-alt me-2"></i> {{ contact }}</div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {% if clinic.schedule %}
+                        <div class="schedule-info">
+                            <div class="info-label">Schedule:</div>
+                            <div class="mt-2">
+                                <i class="far fa-clock me-2"></i> {{ clinic.schedule }}
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="clinic-map" id="clinic-map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ maps_api_key }}&callback=initMap"></script>
+<script>
+    function initMap() {
+        // Simple placeholder for a map - would need geocoding in real implementation
+        const mapOptions = {
+            center: { lat: 14.5995, lng: 120.9842 }, // Default to Manila if no coordinates available
+            zoom: 15
+        };
+        
+        const map = new google.maps.Map(document.getElementById("clinic-map"), mapOptions);
+        
+        // Add a marker for the clinic location
+        const marker = new google.maps.Marker({
+            position: mapOptions.center,
+            map: map,
+            title: "{{ clinic.clinic_name }}"
+        });
+    }
+</script>
+{% endblock %}

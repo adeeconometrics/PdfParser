@@ -1,4 +1,4 @@
-from typing import List,Dict, Optional
+from typing import List, Dict, Optional
 
 from pathlib import Path
 from dataclasses import dataclass
@@ -12,16 +12,18 @@ app = Flask(__name__, template_folder='templates')
 json_path = Path('./datasource/carsaleslist.json')
 with open(json_path, 'r', encoding='utf-8') as f:
     cars = json.load(f)
+
+
 @dataclass
 class CarSalesModel:
-    No:int
-    Model:Optional[int] = None
-    BrandAndVariant:Optional[str] = None
-    Transmission:Optional[str] = None
-    PlateNo:Optional[str] = None
-    Mileage:Optional[int] = None
-    Color:Optional[str] = None
-    SellingPrice:Optional[int] = None
+    No: int
+    Model: Optional[int] = None
+    BrandAndVariant: Optional[str] = None
+    Transmission: Optional[str] = None
+    PlateNo: Optional[str] = None
+    Mileage: Optional[int] = None
+    Color: Optional[str] = None
+    SellingPrice: Optional[int] = None
 
     def to_dict(self) -> dict:
         return {
@@ -35,9 +37,10 @@ class CarSalesModel:
             'price': self.SellingPrice
         }
 
-def pdf2json(pdf_path:Path)-> List[Dict[str, str]]:
+
+def pdf2json(pdf_path: Path) -> List[Dict[str, str]]:
     tables = tb.read_pdf(pdf_path, pages="all")
-    data:List[Dict[str,str]] = []
+    data: List[Dict[str, str]] = []
     for table in tables:
         if len(table.columns) < 8:
             continue
@@ -97,7 +100,8 @@ def data() -> dict:
                 key=lambda car: float(car[col_name].replace(',', '')),
                 reverse=descending)
         else:
-            filtered_cars.sort(key=lambda car: car[col_name], reverse=descending)
+            filtered_cars.sort(
+                key=lambda car: car[col_name], reverse=descending)
 
     # Pagination
     start = request.args.get('start', 0, type=int)
@@ -111,7 +115,6 @@ def data() -> dict:
         'recordsFiltered': total_filtered,
         'draw': request.args.get('draw', 0, type=int)
     }
-
 
 
 if __name__ == '__main__':
