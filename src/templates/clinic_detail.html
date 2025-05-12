@@ -28,6 +28,14 @@
         width: 100%;
         border-radius: 8px;
         margin-top: 20px;
+        position: relative;
+    }
+    .clinic-map .alert {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        z-index: 1000;
     }
     .dentist-name {
         font-weight: 600;
@@ -145,24 +153,94 @@
 
 {% block scripts %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Leaflet CSS and JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ maps_api_key }}&callback=initMap"></script>
 <script>
-    function initMap() {
-        // Simple placeholder for a map - would need geocoding in real implementation
-        const mapOptions = {
-            center: { lat: 14.5995, lng: 120.9842 }, // Default to Manila if no coordinates available
-            zoom: 15
-        };
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize the map with default coordinates (Manila, Philippines)
+        const defaultLat = 14.5995;
+        const defaultLng = 120.9842;
         
-        const map = new google.maps.Map(document.getElementById("clinic-map"), mapOptions);
+        const map = L.map('clinic-map').setView([defaultLat, defaultLng], 15);
         
-        // Add a marker for the clinic location
-        const marker = new google.maps.Marker({
-            position: mapOptions.center,
-            map: map,
-            title: "{{ clinic.clinic_name }}"
-        });
-    }
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 19
+        }).addTo(map);
+
+        // Create a loading indicator
+        const loadingDiv = document.createElement('div');
+        loadingDiv.className = 'text-center p-3';
+        loadingDiv.innerHTML = '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div><p class="mt-2">Finding location...</p>';
+        
+        document.getElementById('clinic-map').appendChild(loadingDiv);
+        
+        // Build the search query using clinic information
+        let searchQuery = '';
+        {% if clinic.address %}
+        searchQuery += '{{ clinic.address|replace("\'", "\\\'")|replace("\"", "\\\"") }}, ';
+        {% endif %}
+        {% if clinic.city %}
+        searchQuery += '{{ clinic.city|replace("\'", "\\\'")|replace("\"", "\\\"") }}, ';
+        {% endif %}
+        {% if clinic.province %}
+        searchQuery += '{{ clinic.province|replace("\'", "\\\'")|replace("\"", "\\\"") }}, ';
+        {% endif %}
+        {% if clinic.region %}
+        searchQuery += '{{ clinic.region|replace("\'", "\\\'")|replace("\"", "\\\"") }}, ';
+        {% endif %}
+        searchQuery += 'Philippines';
+
+        // Use Google Maps API for geocoding
+        fetch(`https://maps.googleapis.com/maps/api/geocode/json?q=${encodeURIComponent(searchQuery)}&limit=1&key={{ google_maps_api_key }}`)
+            .then(response => response.json())
+            .then(data => {
+                // Remove loading indicator
+                if (loadingDiv.parentNode) {
+                    loadingDiv.parentNode.removeChild(loadingDiv);
+                }
+                
+                if (data && data.length > 0) {
+                    const lat = parseFloat(data[0].lat);
+                    const lon = parseFloat(data[0].lon);
+                    
+                    // Update map view
+                    map.setView([lat, lon], 16);
+                    
+                    // Add marker
+                    const marker = L.marker([lat, lon]).addTo(map);
+                    
+                    // Add popup with clinic info
+                    const popupContent = `
+                        <strong>{{ clinic.clinic_name }}</strong><br>
+                        {{ clinic.dentist_name }}<br>
+                        {{ clinic.address }}
+                    `;
+                    marker.bindPopup(popupContent).openPopup();
+                } else {
+                    // If no results were found, show an error message
+                    const errorDiv = document.createElement('div');
+                    errorDiv.className = 'alert alert-warning';
+                    errorDiv.innerHTML = 'Location not found. Showing default map.';
+                    document.getElementById('clinic-map').appendChild(errorDiv);
+                }
+            })
+            .catch(error => {
+                console.error('Error geocoding address:', error);
+                // Remove loading indicator
+                if (loadingDiv.parentNode) {
+                    loadingDiv.parentNode.removeChild(loadingDiv);
+                }
+                
+                // Add error message
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'alert alert-danger';
+                errorDiv.innerHTML = 'Error finding location. Please try again later.';
+                document.getElementById('clinic-map').appendChild(errorDiv);
+            });
+    });
 </script>
 {% endblock %}

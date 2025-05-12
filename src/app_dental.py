@@ -2,6 +2,8 @@ from typing import Dict, List
 from pathlib import Path
 import json
 import logging
+from dotenv import load_dotenv
+import os
 
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -27,6 +29,18 @@ json_path = Path('../datasource/dentalclinicslist.json')
 clinics_data = load_dental_json(json_path)
 if not clinics_data:
     logger.error(f"Failed to load data from {json_path}")
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Retrieve the Google Maps API key
+GOOGLE_MAPS_API_KEY = os.getenv('GOOGLE_MAPS_API_KEY')
+
+
+@app.context_processor
+def inject_api_key():
+    """Inject the API key into all templates."""
+    return {'google_maps_api_key': GOOGLE_MAPS_API_KEY}
 
 
 @app.route('/')
@@ -240,8 +254,7 @@ def clinic_detail(entry_no):
 
     return render_template('clinic_detail.html',
                            title=f"{clinic.get('clinic_name', 'Dental Clinic')} Details",
-                           clinic=clinic_data,
-                           maps_api_key="")  # You would add a real Google Maps API key here
+                           clinic=clinic_data)
 
 
 @app.errorhandler(404)
